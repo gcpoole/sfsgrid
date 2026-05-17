@@ -172,7 +172,8 @@ def merge_blocks_per_day(day: dict) -> list[dict]:
 
     Returns a list of merged 'super-blocks', each with:
       - start, end (earliest start / latest end among merged source blocks)
-      - sessions: union of all sessions, each tagged with its own start/end
+      - sessions: union of all sessions, sorted by room so same-room sessions
+        end up in adjacent columns
     """
     src = sorted(day["blocks"], key=lambda b: parse_24h(b["start"]))
     merged: list[dict] = []
@@ -180,7 +181,6 @@ def merge_blocks_per_day(day: dict) -> list[dict]:
         b_start = parse_24h(b["start"])
         b_end = parse_24h(b["end"])
         if merged and parse_24h(merged[-1]["end"]) >= b_start:
-            # Overlap or adjacency → fold in
             cur = merged[-1]
             cur["sessions"].extend(b["sessions"])
             if b_end > parse_24h(cur["end"]):
@@ -191,6 +191,12 @@ def merge_blocks_per_day(day: dict) -> list[dict]:
                 "end": b["end"],
                 "sessions": list(b["sessions"]),
             })
+
+    # Sort each merged block's sessions by (room, start) so same-room sessions
+    # are adjacent and ordered chronologically within the room.
+    for block in merged:
+        block["sessions"].sort(key=lambda s: (s["room"], s["start_local"]))
+
     return merged
 
 
