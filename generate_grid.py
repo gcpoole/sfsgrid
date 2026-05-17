@@ -136,16 +136,25 @@ def render_cell(presentation: dict, block_start_24h: str, day_color: dict, accor
     )
 
 
-def render_col_header(session: dict) -> str:
+def render_col_header(session: dict, header_accordion_name: str) -> str:
     chairs = ", ".join(session["chairs"])
     chair_label = "Chairs" if len(session["chairs"]) > 1 else "Chair"
-    chairs_text = f"{chair_label}: {chairs}"
-    header_tooltip = f"{session['title']}\n{chairs_text}"
+    chairs_suffix = f" · {chair_label}: {chairs}"
+    title_with_chairs = f"{session['title']}{chairs_suffix}"
+    session_url = "https://sfs-2026.m.asnevents.com.au" + session.get("url", "")
     return (
-        f"<div class='col-header'>"
+        f"<details class='col-header' name='{escape(header_accordion_name)}'>"
+        f"<summary class='col-header-summary'>"
         f"<div class='col-room'>{escape(session['room'])}</div>"
-        f"<div class='col-title' title='{escape(header_tooltip)}'>{escape(session['title'])}</div>"
+        f"<div class='col-title' title='{escape(title_with_chairs)}'>"
+        f"{escape(session['title'])}"
+        f"<span class='col-chairs-suffix'>{escape(chairs_suffix)}</span>"
         f"</div>"
+        f"</summary>"
+        f"<div class='col-header-detail'>"
+        f"<a class='detail-link' href='{escape(session_url)}'>View session →</a>"
+        f"</div>"
+        f"</details>"
     )
 
 
@@ -202,8 +211,9 @@ def render_block(day: dict, block: dict) -> str:
 
     accordion_name = f"acc-{anchor}"
 
+    header_accordion_name = f"acc-h-{anchor}"
     header_cells = "".join(
-        f"<div class='col'>{render_col_header(s)}</div>"
+        f"<div class='col'>{render_col_header(s, header_accordion_name)}</div>"
         for s in block["sessions"]
     )
     body_cells = "".join(
@@ -268,7 +278,7 @@ header.page-header {
 header.page-header h1 { margin: 0; font-size: 18px; font-weight: 600; }
 header.page-header .subtitle { font-size: 12px; opacity: 0.8; margin-top: 2px; }
 .tab-bar {
-  position: sticky; top: 0; z-index: 10;
+  position: sticky; top: 0; z-index: 200;
   background: #ffffff; border-bottom: 1px solid #ddd;
   padding: 8px 12px;
   display: flex; gap: 8px; flex-wrap: nowrap;
@@ -282,6 +292,7 @@ header.page-header .subtitle { font-size: 12px; opacity: 0.8; margin-top: 2px; }
 .tab:hover { opacity: 0.85; }
 
 section.block { margin: 24px 0; position: relative; }
+section.block:first-of-type { margin-top: 0; }
 /* When a cell is open inside this block, raise the entire section's
    stacking context so the open cell can draw over the next block below. */
 section.block:has(.cell[open]) { z-index: 100; }
@@ -340,14 +351,27 @@ section.block:has(.cell[open]) { z-index: 100; }
 .col:last-child { border-right: none; }
 .col-header {
   background: #fafafa;
-  padding: 6px 8px;
   border-bottom: 1px solid #ccc;
   font-size: 11px;
+  cursor: pointer;
+}
+.col-header-summary {
+  list-style: none;
+  padding: 6px 8px;
   height: 80px;
   display: flex; flex-direction: column;
 }
+.col-header-summary::-webkit-details-marker { display: none; }
+.col-header[open] {
+  background: #fff;
+  border-bottom: 2px solid #555;
+  position: relative;
+  z-index: 6;  /* above sibling headers, below tab bar */
+}
+.col-header[open] .col-header-summary { height: auto; }
 .col-room {
   font-weight: 700; color: #444;
+  font-size: 13px;
   flex: 0 0 auto;
 }
 .col-title {
@@ -357,6 +381,17 @@ section.block:has(.cell[open]) { z-index: 100; }
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   line-clamp: 3;
+}
+.col-header[open] .col-title {
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+  overflow: visible;
+}
+.col-chairs-suffix { font-weight: 400; color: #777; }
+.col-header-detail {
+  padding: 6px 8px 10px;
+  border-top: 1px solid rgba(0,0,0,0.12);
+  font-size: 12px; line-height: 1.4;
 }
 .col-body { position: relative; }
 .cell {
@@ -432,11 +467,10 @@ section.block:has(.cell[open]) { z-index: 100; }
 
 SCROLL_SYNC_JS = """
 // (1) Sync each block's header row horizontal scroll to its body row's scroll.
-// Vertical sticky on the block-cap is pure CSS — this handler only fires
-// during horizontal drag.
-// (2) Close any open cell when the page scrolls vertically more than a small
-// jitter threshold. Opening a cell floats it above the sticky cap; scrolling
-// is a clear "I'm done looking at this" signal.
+// (2) When a cell opens, grow its .col-body to accommodate the expanded cell
+//     so the document reflows naturally (next block pushed down). Restore
+//     original height on close.
+// (3) Close any open cell when the page scrolls vertically beyond a threshold.
 (function () {
   document.querySelectorAll('section.block').forEach(function (block) {
     var body = block.querySelector('.body-scroll');
@@ -447,24 +481,59 @@ SCROLL_SYNC_JS = """
     }, { passive: true });
   });
 
-  // Close-on-scroll: track the Y position when a cell opens; if the user
-  // moves more than 20px from that point, close it.
+  // Track the open cell so we can grow/restore its column body.
   var openCell = null;
   var openAtY = 0;
+  var grownColBody = null;
+  var originalColHeight = '';
+
+  function growColBodyFor(cell) {
+    var colBody = cell.closest('.col-body');
+    if (!colBody) return;
+    // Cell's top offset is from its inline style. We want the col-body to
+    // contain the cell's full extent: top + offsetHeight + small breathing room.
+    var topPx = parseFloat(cell.style.top) || 0;
+    var needed = topPx + cell.offsetHeight + 8;
+    // Only grow; never shrink below the original block-proportional height.
+    var orig = parseFloat(colBody.style.height) || 0;
+    if (needed > orig) {
+      grownColBody = colBody;
+      originalColHeight = colBody.style.height;
+      colBody.style.height = needed + 'px';
+    }
+  }
+
+  function restoreColBody() {
+    if (grownColBody) {
+      grownColBody.style.height = originalColHeight;
+      grownColBody = null;
+      originalColHeight = '';
+    }
+  }
 
   document.addEventListener('toggle', function (e) {
-    if (e.target.matches('details.cell') && e.target.open) {
+    if (!e.target.matches('details.cell')) return;
+    if (e.target.open) {
+      // Restore any previously-grown col-body first (exclusive accordion).
+      restoreColBody();
       openCell = e.target;
       openAtY = window.scrollY;
-    } else if (e.target === openCell && !e.target.open) {
+      // Let the browser finish reflowing the cell to its open size before measuring.
+      requestAnimationFrame(function () {
+        if (openCell === e.target) growColBodyFor(e.target);
+      });
+    } else if (e.target === openCell) {
+      restoreColBody();
       openCell = null;
     }
   }, true);
 
   window.addEventListener('scroll', function () {
     if (openCell && Math.abs(window.scrollY - openAtY) > 20) {
-      openCell.open = false;
+      var c = openCell;
       openCell = null;
+      restoreColBody();
+      c.open = false;
     }
   }, { passive: true });
 })();
@@ -501,7 +570,6 @@ def render_page(data: dict) -> str:
 <body>
 <header class="page-header">
   <h1>SFS 2026 — Concurrent Session Grid</h1>
-  <div class="subtitle">Society for Freshwater Science annual meeting · Spokane, WA · May 17–21, 2026 · Click any talk to open its abstract on the official site</div>
 </header>
 {tabs}
 <main>
