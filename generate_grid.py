@@ -159,20 +159,26 @@ def render_cell(presentation: dict, block_start_24h: str, day_color: dict, accor
     )
 
 
-def render_session_column(session: dict, block_start_24h: str, block_height_px: int, day_color: dict, accordion_name: str) -> str:
+def render_col_header(session: dict) -> str:
     chairs = ", ".join(session["chairs"])
     chair_label = "Chairs" if len(session["chairs"]) > 1 else "Chair"
     chairs_text = f"{chair_label}: {chairs}"
     header_tooltip = f"{session['title']}\n{chairs_text}"
-    header = (
+    return (
         f"<div class='col-header'>"
         f"<div class='col-room'>{escape(session['room'])}</div>"
         f"<div class='col-title' title='{escape(header_tooltip)}'>{escape(session['title'])}</div>"
         f"</div>"
     )
-    cells = "".join(render_cell(p, block_start_24h, day_color, accordion_name) for p in session["presentations"])
-    column_body = f"<div class='col-body' style='height:{block_height_px}px;'>{cells}</div>"
-    return f"<div class='col'>{header}{column_body}</div>"
+
+
+def render_col_body(session: dict, block_start_24h: str, block_height_px: int,
+                    day_color: dict, accordion_name: str) -> str:
+    cells = "".join(
+        render_cell(p, block_start_24h, day_color, accordion_name)
+        for p in session["presentations"]
+    )
+    return f"<div class='col-body' style='height:{block_height_px}px;'>{cells}</div>"
 
 
 def merge_blocks_per_day(day: dict) -> list[dict]:
@@ -218,18 +224,33 @@ def render_block(day: dict, block: dict) -> str:
     )
 
     accordion_name = f"acc-{anchor}"
-    columns = "".join(
-        render_session_column(s, block["start"], block_height_px, color, accordion_name)
+
+    header_cells = "".join(
+        f"<div class='col'>{render_col_header(s)}</div>"
+        for s in block["sessions"]
+    )
+    body_cells = "".join(
+        f"<div class='col'>{render_col_body(s, block['start'], block_height_px, color, accordion_name)}</div>"
         for s in block["sessions"]
     )
 
-    grid = (
-        f"<div class='block-grid'>"
-        f"<div class='cols-wrap'>{columns}</div>"
+    # block-cap (bar + header row) lives OUTSIDE the horizontal-scrolling
+    # body-wrap, so vertical sticky pins it against the viewport (same trick
+    # the tab bar uses). A tiny JS shim syncs header-row.scrollLeft to
+    # body-wrap.scrollLeft on horizontal scroll only.
+    return (
+        f"<section class='block'>"
+        f"<div class='block-cap'>"
+        f"{bar}"
+        f"<div class='header-wrap'>"
+        f"<div class='header-row'>{header_cells}</div>"
         f"</div>"
+        f"</div>"
+        f"<div class='body-wrap'>"
+        f"<div class='body-row'>{body_cells}</div>"
+        f"</div>"
+        f"</section>"
     )
-
-    return f"<section class='block'>{bar}{grid}</section>"
 
 
 def render_tabs(data: dict) -> str:
@@ -278,29 +299,45 @@ header.page-header .subtitle { font-size: 12px; opacity: 0.8; margin-top: 2px; }
 .tab:hover { opacity: 0.85; }
 
 section.block { margin: 24px 0; }
+
+/* The block cap (bar + header row) lives OUTSIDE any horizontal scroll
+   container — same as the tab bar — so vertical sticky pins it cleanly to
+   the viewport. The body-wrap below it scrolls horizontally. */
+.block-cap {
+  position: sticky;
+  top: 46px;  /* under the day tabs */
+  z-index: 5;
+  background: #fff;
+  margin: 0 12px;
+  border: 1px solid #ddd;
+  border-bottom: none;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
 .block-bar {
   padding: 10px 16px; font-weight: 600;
   display: flex; align-items: baseline; gap: 14px;
-  position: sticky; top: 46px; z-index: 5;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
 }
 .block-day { font-size: 15px; }
 .block-time { font-size: 13px; opacity: 0.9; }
 
-.block-grid {
-  background: #fff;
+/* Header row scrolls horizontally invisibly — JS syncs it to the body scroll. */
+.header-wrap {
+  overflow: hidden;
+  border-top: 1px solid #ddd;
+}
+.body-wrap {
   margin: 0 12px;
   border: 1px solid #ddd;
   border-top: none;
-}
-.cols-wrap {
-  display: flex;
   overflow-x: auto;
-  /* Sticky descendants are sticky against viewport for vertical and against
-     this scroll container for horizontal, which is what we want. */
+  background: #fff;
+}
+.header-row, .body-row {
+  display: flex;
 }
 .col {
-  flex: 1 1 0; min-width: 160px;
+  flex: 1 1 0;
+  min-width: 160px;
   border-right: 1px solid #eee;
   display: flex; flex-direction: column;
 }
@@ -447,6 +484,23 @@ STICKY_JS = """
 """
 
 
+SCROLL_SYNC_JS = """
+// Sync each block's header row horizontal scroll to its body row's scroll.
+// Vertical sticky on the block-cap is pure CSS (no JS) — this handler only
+// fires during horizontal drag, which doesn't trigger mobile scroll-jumpiness.
+(function () {
+  document.querySelectorAll('section.block').forEach(function (block) {
+    var body = block.querySelector('.body-wrap');
+    var header = block.querySelector('.header-wrap');
+    if (!body || !header) return;
+    body.addEventListener('scroll', function () {
+      header.scrollLeft = body.scrollLeft;
+    }, { passive: true });
+  });
+})();
+"""
+
+
 def render_page(data: dict) -> str:
     tabs = render_tabs(data)
 
@@ -484,6 +538,7 @@ def render_page(data: dict) -> str:
 <main>
 {blocks_html}
 </main>
+<script>{SCROLL_SYNC_JS}</script>
 </body>
 </html>"""
 
