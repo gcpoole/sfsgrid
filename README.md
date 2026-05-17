@@ -5,6 +5,8 @@ Static HTML grid of SFS 2026 concurrent sessions, scraped from
 
 **Live site**: `docs/index.html` (served by GitHub Pages from the `docs/` folder).
 
+> **Local working copy lives at:** `~/claude_working_dir/sfs2026_schedule/`
+
 ## Layout
 
 ```
