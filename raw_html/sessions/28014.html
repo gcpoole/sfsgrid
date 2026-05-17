@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="csrf_token" content='MTc3ODk3NTMzMjByM3NzTG1MbWZvS256anFMeld0VFEwM1dpWjhvcXVz'/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <meta name="csrf_token" content='MTc3ODk3NTMzMjByM3NzTG1MbWZvS256anFMeld0VFEwM1dpWjhvcXVz'/>
+      <link rel="apple-touch-icon" href="https://asnevents.s3.amazonaws.com/event/2021/images/EventSquare/SFS2026_Logo_4C.png"/>
+    <link rel="icon" href="https://asnevents.s3.amazonaws.com/event/2021/images/EventSquare/SFS2026_Logo_4C.png"/>
+    
+
+
+  <!-- iPhone -->
+  <link href="https://sfs-2026.m.asnevents.com.au/style/mobile/images/startup/apple-touch-startup-image.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+
+  <!-- iPhone (Retina) -->
+  <link href="https://sfs-2026.m.asnevents.com.au/style/mobile/images/startup/apple-touch-startup-image-retina.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+  <!-- iPhone 5 -->
+  <link href="https://sfs-2026.m.asnevents.com.au/style/mobile/images/startup/apple-touch-startup-image-retina.png"  media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+  <!-- iPad Portrait -->
+  <link href="https://sfs-2026.m.asnevents.com.au/style/mobile/images/startup/apple-touch-startup-image-tablet-portrait.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+
+  <!-- iPad Landscape -->
+  <link href="https://sfs-2026.m.asnevents.com.au/style/mobile/images/startup/apple-touch-startup-image-tablet-landscape.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+
+  <!-- iPad Portrait (Retina) -->
+  <link href="https://sfs-2026.m.asnevents.com.au/style/mobile/images/startup/apple-touch-startup-image-tablet-portrait.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+  <!-- iPad Landscape (Retina) -->
+  <link href="https://sfs-2026.m.asnevents.com.au/style/mobile/images/startup/apple-touch-startup-image-tablet-landscape.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+  
+
+
+
+
+
+
+    <script type="text/javascript" src="/script/modernizr.min.js?m=1756372773"></script>
+<script type="text/javascript" src="/script/jquery/jquery.min.js?m=1756372773"></script>
+<script type="text/javascript" src="/script/mobile/v2/jquery.pjax.js?m=1756372773"></script>
+<script type="text/javascript" src="/script/mobile/v2/hammer.min.js?m=1756372773"></script>
+<script type="text/javascript" src="/script/mobile/v2/bootstrap-switch.min.js?m=1756372773"></script>
+<script type="text/javascript" src="/script/mobile/v2/mobile.js?m=1756372773"></script>
+<script type="text/javascript" src="/script/lib/d3.v3.min.js?m=1756372773"></script>
+<script type="text/javascript" src="/script/mobile/v2/poll.js?m=1756372773"></script>
+<script type="text/javascript" src="/script/lib/bootstrap.js?m=1756372773"></script>
+<script type="text/javascript" src="/script/utilities/moment.min.js?m=1756372773"></script>
+<script type="text/javascript" src="/build/js/react-lib.js?m=1756372773"></script>
+<script type="text/javascript" src="/build/js/Mobile/FilterList.js?m=1756372773"></script>
+<link rel="stylesheet" type="text/css" href="/build/css/mobile/v2/responsive-sidebar.css?m=1756372773" />
+<link rel="stylesheet" type="text/css" href="/build/css/themes/blue-theme.css?m=1756372773" />
+<link rel="stylesheet" type="text/css" href="/build/css/font-awesome-4.3.0/scss/font-awesome.css?m=1756372773" />
+
+  <title>Food Webs 1.0 &mdash; ASN Events</title>
+
+      <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-32858514-1', {
+                'cookieDomain': 'none'
+      });
+
+            
+
+      ga('send', 'pageview');
+      ga('custom.send', 'pageview');
+
+      jQuery(function($) {
+        var trackPageview = function() {
+          var url = location.pathname + location.hash
+          ga('send', 'pageview', url)
+          ga('custom.send', 'pageview', url)
+        }
+
+        var trackEvent = function(category, action, label, value) {
+          ga("send", "event", category, action, label, value)
+          ga("custom.send", "event", category, action, label, value)
+        }
+
+        $(document).on('pjax:success', trackPageview)
+        $(document).on('shown.tab', trackPageview)
+        $(document).on("favourite.update", function(e, o) {
+          trackEvent("Favourite", o.Favourite? "Save" : "Delete", o.ItemType+"-"+o.Item)
+        })
+        $(document).on("notes.update", function(e, o) {
+          trackEvent("Notes", "Save", o.ItemType+"-"+o.Item)
+        })
+        $(document).on("thumbsup.update", function(e, o) {
+          trackEvent("ThumbsUp", o.ThumbsUp ? "Save" : "Delete", o.ItemType+"-"+o.Item)
+        })
+        $(document).on("whatshappening", function() {
+          trackPageview("/schedule/whats-happening-now")
+        })
+        $(document).on("favourite.filter", function(e, filter) {
+          trackEvent("Favourite", filter ? "Enable Filter" : "Disable Filter")
+        })
+      })
+
+    </script>
+  	<style>
+
+		#mobile-root p a{
+			color: blue !important;
+			text-decoration: underline !important;
+		}
+
+		#mobile-root p a:visited{
+			color: blue;
+			text-decoration: underline !important;
+		}
+	</style>
+</head>
+<body id='mobile-root'>
+    <div class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-brand">
+              <button id='back' class='btn btn-default' type='button' onclick="history.back(-1)">
+          <i class='glyphicon glyphicon-chevron-left'></i>
+        </button>
+      
+      <a id='navbar-logo' href="/">
+                  <img src='https://asnevents.s3.amazonaws.com/event/2021/images/EventSquare/SFS2026_Logo_4C.png'  height='25px'  />                SFS 2026      </a>
+    </div>
+    <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div><!-- /.container-fluid -->
+</div>
+    <div id='pjax-container' class='page-container row-offcanvas-left container-fluid main-container' data-url=''>
+      <title>Food Webs 1.0 &mdash; ASN Events</title>
+
+    <div id='sidebar' class='col-sm-3 sidebar-offcanvas' role='navigation'>
+    <div class='list-group'>
+                  <a href='/schedule#2026-05-17' class='list-group-item' data-date='2026-05-17'>
+          Sunday        </a>
+                        <a href='/schedule#2026-05-18' class='list-group-item' data-date='2026-05-18'>
+          Monday        </a>
+                        <a href='/schedule#2026-05-19' class='list-group-item' data-date='2026-05-19'>
+          Tuesday        </a>
+                        <a href='/schedule#2026-05-20' class='list-group-item' data-date='2026-05-20'>
+          Wednesday        </a>
+                        <a href='/schedule#2026-05-21' class='list-group-item' data-date='2026-05-21'>
+          Thursday        </a>
+            </div>
+
+  
+  <div class="list-group">
+        <a class='list-group-item' href='/schedule/search/sessions'>Find</a>
+    <a class='list-group-item' href='/schedule/search/abstracts'>Find Presentations</a>
+    <a class='list-group-item' href='/schedule/search/authors'>Find Presenting Authors</a>
+              <a class='list-group-item' href='/schedule/conference'>
+        Glance      </a>
+      </div>
+
+
+  <div class='list-group'>
+  </div>
+
+  <ul>
+    <a class='navbar-toggle'>Close</a>
+  </ul>
+</div>
+
+
+<div class='main col-xs-12 col-sm-9 content' data-user=''>
+    <ol class='breadcrumb'>
+      <li><a id="breadcrumb-schedule" href='/schedule'>Schedule</a></li>
+      <li><a id="breadcrumb-wednesday" href='/schedule#2026-05-20'>Wednesday</a></li>
+      <li><a id="breadcrumb-food_webs_1.0" href='/schedule/session/28014'>Food Webs 1.0</a></li>
+  </ol>
+
+  <div class='panel-text-content session ' data-entity='session_28014' data-date='2026-05-20'>
+    
+      <ul id='session-tabs' class="nav nav-tabs" role="tablist">
+
+    <li id="previous-tab">
+              <a href='/schedule/session/28013'>
+          <i class='glyphicon glyphicon-chevron-left '></i>        </a>
+          </li>
+
+    <li id="current-tab" class="active">
+      <a href='/schedule/session/28014'>
+        Food Webs 1.0      </a>
+    </li>
+
+    <li id="next-tab">
+              <a href='/schedule/session/28015'>
+          <i class='glyphicon glyphicon-chevron-right '></i>        </a>
+          </li>
+  </ul>
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Rooms 206 D    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Therese Frauendorf &amp; Lusha Tronstad</span>
+      </div>
+
+    <br />
+
+    
+    <div class="btn-group">
+  <button type="button" class="btn btn-default action_favourite" data-role='favourite'><i class='glyphicon glyphicon-star'></i> Favourite</button>
+  <button id='action_notes' data-toggle='modal' data-target='#notes' class='btn btn-default' >
+    <i class='glyphicon glyphicon-pencil'></i> Notes  </button>
+  
+      <button id='thumbs_up' class='btn btn-default action_thumbs_up' data-role='thumbs-up'>
+      <i class='fa fa-thumbs-o-up'></i> Thumbs Up    </button>
+  
+  
+  
+
+  </div>
+
+<div class="modal fade" id='notes'>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Add notes</h4>
+      </div>
+      <div class="modal-body">
+        <form id='abstract-notes' method='post'>
+          <input type='hidden' name='csrf_token' value='MTc3ODk3NTMzMjByM3NzTG1MbWZvS256anFMeld0VFEwM1dpWjhvcXVz' />                    <div class='form-group'>
+            <textarea name='Notes' id='text-notes' class=' ' cols='55' rows='25' wrap='soft'  ></textarea>          </div>
+          <input id='save-notes' type='submit' name='save-notes' value='Save' class='submit btn btn-primary ' data-dismiss='modal' data-role='notes' />        </form>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+    <br />
+
+
+  </div>
+
+  <div id='abstract-list' class='list-group abstracts'>
+      
+
+    
+    <a id='abstrakt_136117' data-entity='abstrakt_136117'href='/schedule/session/28014/abstract/136117' class='abstrakt list-group-item abstrakteventtype_7957'>
+      <h4 class='list-group-item-heading title'>
+  Cryptic chemoautotrophic and methanotrophic processes complicate the use of carbon stable isotopes in rivers  <small> (136117)</small>
+</h4>
+<div class='title-line time'>
+  <i class='glyphicon glyphicon-time information'></i>
+  10:30 AM</div>
+<div class='title-line author'>
+      <i class='glyphicon glyphicon-user information'></i>
+    Amanda G DelVecchia    <br />
+  </div>
+    </a>
+      
+
+    
+    <a id='abstrakt_134761' data-entity='abstrakt_134761'href='/schedule/session/28014/abstract/134761' class='abstrakt list-group-item abstrakteventtype_7957'>
+      <h4 class='list-group-item-heading title'>
+  Time-varying drivers of phenological change in an estuarine food web  <small> (134761)</small>
+</h4>
+<div class='title-line time'>
+  <i class='glyphicon glyphicon-time information'></i>
+  10:45 AM</div>
+<div class='title-line author'>
+      <i class='glyphicon glyphicon-user information'></i>
+    Robert Fournier    <br />
+  </div>
+    </a>
+      
+
+    
+    <a id='abstrakt_134873' data-entity='abstrakt_134873'href='/schedule/session/28014/abstract/134873' class='abstrakt list-group-item abstrakteventtype_7957'>
+      <h4 class='list-group-item-heading title'>
+  Variation in basal resource isotope values and their contributions to a keystone wetland piscivore  <small> (134873)</small>
+</h4>
+<div class='title-line time'>
+  <i class='glyphicon glyphicon-time information'></i>
+  11:00 AM</div>
+<div class='title-line author'>
+      <i class='glyphicon glyphicon-user information'></i>
+    Matthew S. Foli    <br />
+  </div>
+    </a>
+      
+
+    
+    <a id='abstrakt_135592' data-entity='abstrakt_135592'href='/schedule/session/28014/abstract/135592' class='abstrakt list-group-item abstrakteventtype_7957'>
+      <h4 class='list-group-item-heading title'>
+  Towards understanding the combined effects of warming and drought on stream food web stability  <small> (135592)</small>
+</h4>
+<div class='title-line time'>
+  <i class='glyphicon glyphicon-time information'></i>
+  11:15 AM</div>
+<div class='title-line author'>
+      <i class='glyphicon glyphicon-user information'></i>
+    Nate M Heili    <br />
+  </div>
+    </a>
+      
+
+    
+    <a id='abstrakt_135974' data-entity='abstrakt_135974'href='/schedule/session/28014/abstract/135974' class='abstrakt list-group-item abstrakteventtype_7957'>
+      <h4 class='list-group-item-heading title'>
+  Discovering in reverse: using isotopes and omics to reveal ecological interactions in microbiomes in stream ecosystems.  <small> (135974)</small>
+</h4>
+<div class='title-line time'>
+  <i class='glyphicon glyphicon-time information'></i>
+  11:30 AM</div>
+<div class='title-line author'>
+      <i class='glyphicon glyphicon-user information'></i>
+    Jane Marks    <br />
+  </div>
+    </a>
+  </div>
+
+
+      <div id='login_modal' class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Login</h4>
+      </div>
+      <div class="modal-body">
+        <div id='login' class='ui-body-a '>
+  <form role='form' class='modalform' method="post" action='https://members.asnevents.com.au/login/do' data-ajax='false'>
+    <input type='hidden' name='csrf_token' value='MTc3ODk3NTMzMjByM3NzTG1MbWZvS256anFMeld0VFEwM1dpWjhvcXVz' />    <input type='hidden' name='redirect_back' id='redirect_back' value='' />
+    <div>
+      <p>To access your <strong>personal details</strong>, <strong>event notifications</strong>, <strong>favourite abstracts</strong>, <strong>recorded notes</strong> and other features please provide your <strong>Currinda</strong> login details below.</p>
+    </div>
+
+    <div class="form-group">
+      <input type='text' name='Email' id='Email' class='textfield' value='' size='30' maxlength='160' placeholder='Email'/>    </div>
+    <div class="form-group">
+      <input type='password' name='Password' id='Password' class='textfield' value='' size='20' maxlength='' autocomplete='off' placeholder='Password' />    </div>
+    <div id='login-actions' class="form-group" data-role="fieldcontain">
+      <input id='loginbtn' type='submit' name='loginbtn' value='Login' class='submit btn btn-primary '  />      <a id='forgot-password' class='btn btn-default' data-role='button' data-theme='b' href="/login/forgotten">Forgot my password</a>
+    </div>
+  </form>
+</div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+  </div>
+    </div>
+    <nav id="tabbar" class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+  <ul class='nav nav-pills nav-justified nav-mobile-justified'>
+    <li>
+      <a id="information-tab" href="/information">
+        <i class='fa fa-info-circle'></i>
+        <span class='tabname hidden-xs'>Event Information</span>
+      </a>
+    </li>
+        <li>
+
+      <a id="schedule-tab" href="/schedule">
+        <i class='fa fa-calendar'></i>
+        <span class='tabname hidden-xs'>Schedule</span>
+      </a>
+    </li>
+        <li>
+      <a id="trade-tab" href="/login">
+        <i class='fa fa-star'></i>
+        <span class='tabname hidden-xs'>Favourites</span>
+      </a>
+    </li>
+    <li>
+      <a id="user-tab" href="/login">
+        <i class='glyphicon glyphicon-user'></i>
+        <span class='tabname hidden-xs'>Login</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+    
+    <div id="loading-bg">
+</div>
+<div id="loading">
+  <i class='fa fa-spinner fa-spin'></i></div>
+
+</body>
+</html>

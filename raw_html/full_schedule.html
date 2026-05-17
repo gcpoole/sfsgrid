@@ -1,0 +1,5114 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="csrf_token" content='MTc3ODk3Mzg1OThidmxJY1dEZzBkcnRtZ0E5Vk5DMzdVbU1Jc3l2ajB3'/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <meta name="csrf_token" content='MTc3ODk3Mzg1OThidmxJY1dEZzBkcnRtZ0E5Vk5DMzdVbU1Jc3l2ajB3'/>
+      <link rel="apple-touch-icon" href="https://asnevents.s3.amazonaws.com/event/2021/images/EventSquare/SFS2026_Logo_4C.png"/>
+    <link rel="icon" href="https://asnevents.s3.amazonaws.com/event/2021/images/EventSquare/SFS2026_Logo_4C.png"/>
+    
+
+
+  <!-- iPhone -->
+  <link href="https://sfs-2026.m.asnevents.com.au/style/mobile/images/startup/apple-touch-startup-image.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+
+  <!-- iPhone (Retina) -->
+  <link href="https://sfs-2026.m.asnevents.com.au/style/mobile/images/startup/apple-touch-startup-image-retina.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+  <!-- iPhone 5 -->
+  <link href="https://sfs-2026.m.asnevents.com.au/style/mobile/images/startup/apple-touch-startup-image-retina.png"  media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+  <!-- iPad Portrait -->
+  <link href="https://sfs-2026.m.asnevents.com.au/style/mobile/images/startup/apple-touch-startup-image-tablet-portrait.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+
+  <!-- iPad Landscape -->
+  <link href="https://sfs-2026.m.asnevents.com.au/style/mobile/images/startup/apple-touch-startup-image-tablet-landscape.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+
+  <!-- iPad Portrait (Retina) -->
+  <link href="https://sfs-2026.m.asnevents.com.au/style/mobile/images/startup/apple-touch-startup-image-tablet-portrait.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+  <!-- iPad Landscape (Retina) -->
+  <link href="https://sfs-2026.m.asnevents.com.au/style/mobile/images/startup/apple-touch-startup-image-tablet-landscape.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+  
+
+
+
+
+
+
+    <script type="text/javascript" src="/script/modernizr.min.js?m=1756372773"></script>
+<script type="text/javascript" src="/script/jquery/jquery.min.js?m=1756372773"></script>
+<script type="text/javascript" src="/script/mobile/v2/jquery.pjax.js?m=1756372773"></script>
+<script type="text/javascript" src="/script/mobile/v2/hammer.min.js?m=1756372773"></script>
+<script type="text/javascript" src="/script/mobile/v2/bootstrap-switch.min.js?m=1756372773"></script>
+<script type="text/javascript" src="/script/mobile/v2/mobile.js?m=1756372773"></script>
+<script type="text/javascript" src="/script/lib/d3.v3.min.js?m=1756372773"></script>
+<script type="text/javascript" src="/script/mobile/v2/poll.js?m=1756372773"></script>
+<script type="text/javascript" src="/script/lib/bootstrap.js?m=1756372773"></script>
+<script type="text/javascript" src="/script/utilities/moment.min.js?m=1756372773"></script>
+<script type="text/javascript" src="/build/js/react-lib.js?m=1756372773"></script>
+<script type="text/javascript" src="/build/js/Mobile/FilterList.js?m=1756372773"></script>
+<link rel="stylesheet" type="text/css" href="/build/css/mobile/v2/responsive-sidebar.css?m=1756372773" />
+<link rel="stylesheet" type="text/css" href="/build/css/themes/blue-theme.css?m=1756372773" />
+<link rel="stylesheet" type="text/css" href="/build/css/font-awesome-4.3.0/scss/font-awesome.css?m=1756372773" />
+
+  <title>Schedule &mdash; ASN Events</title>
+
+      <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-32858514-1', {
+                'cookieDomain': 'none'
+      });
+
+            
+
+      ga('send', 'pageview');
+      ga('custom.send', 'pageview');
+
+      jQuery(function($) {
+        var trackPageview = function() {
+          var url = location.pathname + location.hash
+          ga('send', 'pageview', url)
+          ga('custom.send', 'pageview', url)
+        }
+
+        var trackEvent = function(category, action, label, value) {
+          ga("send", "event", category, action, label, value)
+          ga("custom.send", "event", category, action, label, value)
+        }
+
+        $(document).on('pjax:success', trackPageview)
+        $(document).on('shown.tab', trackPageview)
+        $(document).on("favourite.update", function(e, o) {
+          trackEvent("Favourite", o.Favourite? "Save" : "Delete", o.ItemType+"-"+o.Item)
+        })
+        $(document).on("notes.update", function(e, o) {
+          trackEvent("Notes", "Save", o.ItemType+"-"+o.Item)
+        })
+        $(document).on("thumbsup.update", function(e, o) {
+          trackEvent("ThumbsUp", o.ThumbsUp ? "Save" : "Delete", o.ItemType+"-"+o.Item)
+        })
+        $(document).on("whatshappening", function() {
+          trackPageview("/schedule/whats-happening-now")
+        })
+        $(document).on("favourite.filter", function(e, filter) {
+          trackEvent("Favourite", filter ? "Enable Filter" : "Disable Filter")
+        })
+      })
+
+    </script>
+  	<style>
+
+		#mobile-root p a{
+			color: blue !important;
+			text-decoration: underline !important;
+		}
+
+		#mobile-root p a:visited{
+			color: blue;
+			text-decoration: underline !important;
+		}
+	</style>
+</head>
+<body id='mobile-root'>
+    <div class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-brand">
+      
+      <a id='navbar-logo' href="/">
+                  <img src='https://asnevents.s3.amazonaws.com/event/2021/images/EventSquare/SFS2026_Logo_4C.png'  height='25px'  />                SFS 2026      </a>
+    </div>
+    <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div><!-- /.container-fluid -->
+</div>
+    <div id='pjax-container' class='page-container row-offcanvas-left container-fluid main-container' data-url=''>
+      <title>Schedule &mdash; ASN Events</title>
+
+    <div id='sidebar' class='col-sm-3 sidebar-offcanvas' role='navigation'>
+    <div class='list-group'>
+                  <a href='/schedule#2026-05-17' class='list-group-item' data-date='2026-05-17'>
+          Sunday        </a>
+                        <a href='/schedule#2026-05-18' class='list-group-item' data-date='2026-05-18'>
+          Monday        </a>
+                        <a href='/schedule#2026-05-19' class='list-group-item' data-date='2026-05-19'>
+          Tuesday        </a>
+                        <a href='/schedule#2026-05-20' class='list-group-item' data-date='2026-05-20'>
+          Wednesday        </a>
+                        <a href='/schedule#2026-05-21' class='list-group-item' data-date='2026-05-21'>
+          Thursday        </a>
+            </div>
+
+  
+  <div class="list-group">
+        <a class='list-group-item' href='/schedule/search/sessions'>Find</a>
+    <a class='list-group-item' href='/schedule/search/abstracts'>Find Presentations</a>
+    <a class='list-group-item' href='/schedule/search/authors'>Find Presenting Authors</a>
+              <a class='list-group-item' href='/schedule/conference'>
+        Glance      </a>
+      </div>
+
+
+  <div class='list-group'>
+  </div>
+
+  <ul>
+    <a class='navbar-toggle'>Close</a>
+  </ul>
+</div>
+
+
+<div class='main col-xs-12 col-sm-9 content' data-user=''>
+      <ol class='breadcrumb'>
+      <li><a id="breadcrumb-schedule" href='/schedule'>Schedule</a></li>
+  </ol>
+
+  <ul id='schedule-tabs' class='nav nav-tabs nav-justified nav-mobile-justified' role='tablist'>
+      <li class='' data-date='2026-05-17'>
+      <a class='btn' href='/schedule#2026-05-17'>Sunday</a>
+    </li>
+      <li class='' data-date='2026-05-18'>
+      <a class='btn' href='/schedule#2026-05-18'>Monday</a>
+    </li>
+      <li class='' data-date='2026-05-19'>
+      <a class='btn' href='/schedule#2026-05-19'>Tuesday</a>
+    </li>
+      <li class='' data-date='2026-05-20'>
+      <a class='btn' href='/schedule#2026-05-20'>Wednesday</a>
+    </li>
+      <li class='' data-date='2026-05-21'>
+      <a class='btn' href='/schedule#2026-05-21'>Thursday</a>
+    </li>
+  
+  <li class='actions'>
+    <a type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+      <i class='fa fa-ellipsis-h '></i>    </a>
+    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+      <li>
+        <a id='whats-happening-now' class='btn' data-date='2026-05-17'>What's on now?</a>
+      </li>
+    </ul>
+  </li>
+
+</ul>
+
+  <div id='session-list'>
+    <div class='list-group'>
+      <div class='list-group-item'>
+        <div class="checkbox">
+          <label>
+            <input type='checkbox' name='PersonalSchedule' id='PersonalSchedule1' value='1'  class='personal-schedule' />            Only show sessions that I have favourited
+          </label>
+          <div class='pull-right'>
+            <em>(Double tap a session to add to favourites)</em>
+          </div>
+        </div> 
+      </div>
+    </div>
+
+          <div class='list-group session-day' data-date='2026-05-17'>
+                              
+            <a data-entity='session_27918'
+               data-starttime='2026-05-17 14:00 +0000'
+               data-endtime='2026-05-18 02:00 0'
+               id='session_27918'
+               href='/schedule/session/27918'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Registration Open  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    7:00AM - 7:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 103    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_27919'
+               data-starttime='2026-05-17 15:00 +0000'
+               data-endtime='2026-05-18 00:00 0'
+               id='session_27919'
+               href='/schedule/session/27919'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    SFS Instars/NSF Emerge Orientation Workshop (by invite only)  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    8:00AM - 5:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 201 ABC    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_27921'
+               data-starttime='2026-05-17 15:00 +0000'
+               data-endtime='2026-05-17 19:00 0'
+               id='session_27921'
+               href='/schedule/session/27921'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Workshop: Stream Resilience in Focus: Hands-On with NEON Macroinvertebrate, Water Quality & Sensor Data  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    8:00AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 207    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_27922'
+               data-starttime='2026-05-17 15:00 +0000'
+               data-endtime='2026-05-17 19:00 0'
+               id='session_27922'
+               href='/schedule/session/27922'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Workshop: Professional skills for navigating your early career  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    8:00AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 206 A    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_27923'
+               data-starttime='2026-05-17 16:00 +0000'
+               data-endtime='2026-05-18 00:00 0'
+               id='session_27923'
+               href='/schedule/session/27923'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Workshop: Connecting Taxonomists: Training with the Diatoms of North American Platform  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    9:00AM - 5:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 206 C    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_27927'
+               data-starttime='2026-05-17 17:00 +0000'
+               data-endtime='2026-05-18 00:00 0'
+               id='session_27927'
+               href='/schedule/session/27927'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    SFS Board of Directors Meeting (by invite only)  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:00AM - 5:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 102 CD    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_27929'
+               data-starttime='2026-05-17 18:00 +0000'
+               data-endtime='2026-05-17 23:00 0'
+               id='session_27929'
+               href='/schedule/session/27929'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Offsite Workshop: Exploring streams together: using macroinvertebrates to assess local water quality  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    11:00AM - 4:00PM  </div>
+
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_27928'
+               data-starttime='2026-05-17 19:00 +0000'
+               data-endtime='2026-05-17 23:00 0'
+               id='session_27928'
+               href='/schedule/session/27928'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Offsite Workshop: River kayaking safety and navigation for river researchers  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    12:00PM - 4:00PM  </div>
+
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_27926'
+               data-starttime='2026-05-17 19:30 +0000'
+               data-endtime='2026-05-17 23:30 0'
+               id='session_27926'
+               href='/schedule/session/27926'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Workshop: WikiWatershed open source ecosystem for monitoring, data telemetry, and modeling  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    12:30PM - 4:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 206 A    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_27924'
+               data-starttime='2026-05-17 20:00 +0000'
+               data-endtime='2026-05-17 23:00 0'
+               id='session_27924'
+               href='/schedule/session/27924'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Workshop: Coding Best Practices: Git and Version Control  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    1:00PM - 4:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 205    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_27925'
+               data-starttime='2026-05-17 20:00 +0000'
+               data-endtime='2026-05-17 23:00 0'
+               id='session_27925'
+               href='/schedule/session/27925'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Workshop: Integrating science and policy in a changing climate  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    1:00PM - 4:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 207    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_27930'
+               data-starttime='2026-05-17 21:00 +0000'
+               data-endtime='2026-05-17 23:00 0'
+               id='session_27930'
+               href='/schedule/session/27930'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Offsite River Clean-Up  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    2:00PM - 4:00PM  </div>
+
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_27931'
+               data-starttime='2026-05-18 00:00 +0000'
+               data-endtime='2026-05-18 01:30 0'
+               id='session_27931'
+               href='/schedule/session/27931'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Annual Meeting Conference Opening & Award Presentations  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    5:00PM - 6:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Ballroom 100 ABC    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_27932'
+               data-starttime='2026-05-18 01:30 +0000'
+               data-endtime='2026-05-18 03:00 0'
+               id='session_27932'
+               href='/schedule/session/27932'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Welcome Reception  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    6:30PM - 8:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Ballroom Lobby    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_28201'
+               data-starttime='2026-05-18 01:30 +0000'
+               data-endtime='2026-05-18 03:00 0'
+               id='session_28201'
+               href='/schedule/session/28201'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Global Connections International Mixer  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    6:30PM - 8:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Ballroom 100 ABC    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_28202'
+               data-starttime='2026-05-18 01:30 +0000'
+               data-endtime='2026-05-18 03:00 0'
+               id='session_28202'
+               href='/schedule/session/28202'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Undergraduate Mixer  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    6:30PM - 8:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Ballroom 111 ABC    </div>
+  </div>
+
+
+            </a>
+                        </div>
+          <div class='list-group session-day' data-date='2026-05-18'>
+                              
+            <a data-entity='session_27933'
+               data-starttime='2026-05-18 14:30 +0000'
+               data-endtime='2026-05-19 00:00 0'
+               id='session_27933'
+               href='/schedule/session/27933'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Registration Open  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    7:30AM - 5:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 103    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_27934'
+               data-starttime='2026-05-18 14:00 +0000'
+               data-endtime='2026-05-18 15:30 0'
+               id='session_27934'
+               href='/schedule/session/27934'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Freshwater Science Editorial Meeting (by invite only)  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    7:00AM - 8:30AM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 102 CD    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_27935'
+               data-starttime='2026-05-18 14:00 +0000'
+               data-endtime='2026-05-18 15:30 0'
+               id='session_27935'
+               href='/schedule/session/27935'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    SRC Student Orientation Breakfast (ticketed event)  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    7:00AM - 8:30AM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 401 ABC    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_27936'
+               data-starttime='2026-05-18 15:30 +0000'
+               data-endtime='2026-05-18 17:30 0'
+               id='session_27936'
+               href='/schedule/session/27936'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Plenary Session 1 - Desiree Tullos, Conor Giorgi & Dave Upthegrove  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    8:30AM - 10:30AM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Ballroom 100 ABC    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_27938'
+               data-starttime='2026-05-18 15:30 +0000'
+               data-endtime='2026-05-18 19:00 0'
+               id='session_27938'
+               href='/schedule/session/27938'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Taxonomic Testing Session 1  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    8:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 402 ABC    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_28058'
+               data-starttime='2026-05-18 17:00 +0000'
+               data-endtime='2026-05-19 00:30 0'
+               id='session_28058'
+               href='/schedule/session/28058'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Exhibition Open  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:00AM - 5:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Ballroom Lobby    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_28118'
+               data-starttime='2026-05-18 17:00 +0000'
+               data-endtime='2026-05-19 00:00 0'
+               id='session_28118'
+               href='/schedule/session/28118'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Poster Viewing Open  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:00AM - 5:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Ballroom 111 ABC    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_27937'
+               data-starttime='2026-05-18 17:30 +0000'
+               data-endtime='2026-05-18 18:00 0'
+               id='session_27937'
+               href='/schedule/session/27937'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Morning Coffee Break  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 11:00AM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Ballroom Lobby    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_28443'
+               data-starttime='2026-05-18 17:30 +0000'
+               data-endtime='2026-05-18 18:00 0'
+               id='session_28443'
+               href='/schedule/session/28443'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    First-Time SFS Attendee Meetup  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 11:00AM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Ballroom 100 ABC    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_27939'
+               data-starttime='2026-05-18 18:00 +0000'
+               data-endtime='2026-05-18 19:30 0'
+               id='session_27939'
+               href='/schedule/session/27939'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: The past, present, and future of freshwater invasion ecology and management: A career retrospective for David M. Lodge 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    11:00AM - 12:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Conference Theatre    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Matthew Barnes &amp; John Drake</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27940'
+               data-starttime='2026-05-18 18:00 +0000'
+               data-endtime='2026-05-18 19:30 0'
+               id='session_27940'
+               href='/schedule/session/27940'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Across ecosystem linkages: quantifying aquatic-terrestrial reciprocal connections to support resilient watersheds 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    11:00AM - 12:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 102 AB    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+                  <span class='chairman'>Chair: Amaryllis Adey</span><br />
+      
+            </div>
+
+            </a>
+                                        
+            <a data-entity='session_27941'
+               data-starttime='2026-05-18 18:00 +0000'
+               data-endtime='2026-05-18 19:30 0'
+               id='session_27941'
+               href='/schedule/session/27941'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Biogeochemical cycling in human-made freshwaters 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    11:00AM - 12:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 201 ABC    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Audrey Goeckner &amp; AJ Reisinger</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28039'
+               data-starttime='2026-05-18 18:00 +0000'
+               data-endtime='2026-05-18 19:30 0'
+               id='session_28039'
+               href='/schedule/session/28039'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: The fire’s leading edge: Exploring the paradoxical effects of fire on freshwater ecosystems to support more resilient watersheds and communities 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    11:00AM - 12:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 202 ABC    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Maricela Alaniz &amp; Jeremy Brooks</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27944'
+               data-starttime='2026-05-18 18:00 +0000'
+               data-endtime='2026-05-18 19:30 0'
+               id='session_27944'
+               href='/schedule/session/27944'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Microbial Ecology 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    11:00AM - 12:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 205    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Michael Wulf &amp; Isaac Schuman</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28037'
+               data-starttime='2026-05-18 18:00 +0000'
+               data-endtime='2026-05-18 19:30 0'
+               id='session_28037'
+               href='/schedule/session/28037'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Chew on This: The Role of Beavers in Building Resilient Landscapes 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    11:00AM - 12:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 206 A    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Camille McNeely &amp; Sandra Clinton</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27945'
+               data-starttime='2026-05-18 18:00 +0000'
+               data-endtime='2026-05-18 19:30 0'
+               id='session_27945'
+               href='/schedule/session/27945'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Invertebrates 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    11:00AM - 12:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 206 B    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Kaitlin Abell &amp; Evan Hornig</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27946'
+               data-starttime='2026-05-18 18:00 +0000'
+               data-endtime='2026-05-18 19:30 0'
+               id='session_27946'
+               href='/schedule/session/27946'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Remote Sensing & Sensor Technology 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    11:00AM - 12:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 206 C    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Etienne Fluet-Chouinard &amp; Jenna Abrahamson</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27947'
+               data-starttime='2026-05-18 18:00 +0000'
+               data-endtime='2026-05-18 19:30 0'
+               id='session_27947'
+               href='/schedule/session/27947'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: The Changing Cryosphere and Its Impacts on Downstream Freshwaters 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    11:00AM - 12:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Rooms 206 D    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Matthew Dunkle &amp; Holly Harris</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27948'
+               data-starttime='2026-05-18 18:00 +0000'
+               data-endtime='2026-05-18 19:30 0'
+               id='session_27948'
+               href='/schedule/session/27948'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Contaminant Ecology 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    11:00AM - 12:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 207    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Jessica Brandt &amp; Cailin Sinclair</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27949'
+               data-starttime='2026-05-18 18:00 +0000'
+               data-endtime='2026-05-18 19:30 0'
+               id='session_27949'
+               href='/schedule/session/27949'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Building Resilience in Large Rivers of the Northwest 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    11:00AM - 12:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 203    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Lisa Kunza &amp; Brooke Long-Fox</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28218'
+               data-starttime='2026-05-18 19:30 +0000'
+               data-endtime='2026-05-18 21:00 0'
+               id='session_28218'
+               href='/schedule/session/28218'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Lunch on Your Own  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    12:30PM - 2:00PM  </div>
+
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_27950'
+               data-starttime='2026-05-18 19:30 +0000'
+               data-endtime='2026-05-18 21:00 0'
+               id='session_27950'
+               href='/schedule/session/27950'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    SFS Committees Lunch Meeting (RSVP Required)  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    12:30PM - 2:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Ballroom 100 ABC    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_28059'
+               data-starttime='2026-05-18 20:00 +0000'
+               data-endtime='2026-05-18 22:30 0'
+               id='session_28059'
+               href='/schedule/session/28059'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Taxonomic Testing Session 2  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    1:00PM - 3:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 402 ABC    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_27951'
+               data-starttime='2026-05-18 21:00 +0000'
+               data-endtime='2026-05-18 22:30 0'
+               id='session_27951'
+               href='/schedule/session/27951'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: The past, present, and future of freshwater invasion ecology and management: A career retrospective for David M. Lodge 2.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    2:00PM - 3:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Conference Theatre    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Eric Larson &amp; Lindsey Reisinger</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27952'
+               data-starttime='2026-05-18 21:00 +0000'
+               data-endtime='2026-05-18 22:30 0'
+               id='session_27952'
+               href='/schedule/session/27952'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Across ecosystem linkages: quantifying aquatic-terrestrial reciprocal connections to support resilient watersheds 2.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    2:00PM - 3:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 102 AB    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+                  <span class='chairman'>Chair: Amaryllis Adey</span><br />
+      
+            </div>
+
+            </a>
+                                        
+            <a data-entity='session_27953'
+               data-starttime='2026-05-18 21:00 +0000'
+               data-endtime='2026-05-18 22:30 0'
+               id='session_27953'
+               href='/schedule/session/27953'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Biogeochemical cycling in human-made freshwaters 2.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    2:00PM - 3:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 201 ABC    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Jacqueline Gerson &amp; Audrey Goeckner</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28050'
+               data-starttime='2026-05-18 21:00 +0000'
+               data-endtime='2026-05-18 22:30 0'
+               id='session_28050'
+               href='/schedule/session/28050'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: The fire’s leading edge: Exploring the paradoxical effects of fire on freshwater ecosystems to support more resilient watersheds and communities 2.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    2:00PM - 3:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 202 ABC    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Jacob McArtor &amp; Maricela Alaniz</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27956'
+               data-starttime='2026-05-18 21:00 +0000'
+               data-endtime='2026-05-18 22:30 0'
+               id='session_27956'
+               href='/schedule/session/27956'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Molecular Ecology 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    2:00PM - 3:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 205    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Shannon O&#39;Leary &amp; Augustine Sitati</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28011'
+               data-starttime='2026-05-18 21:00 +0000'
+               data-endtime='2026-05-18 22:30 0'
+               id='session_28011'
+               href='/schedule/session/28011'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Swimming together: Successful freshwater collaborations across multiple organizations to generate actionable science 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    2:00PM - 3:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 206 A    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Audrey Huff &amp; Erin Larson</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27957'
+               data-starttime='2026-05-18 21:00 +0000'
+               data-endtime='2026-05-18 22:30 0'
+               id='session_27957'
+               href='/schedule/session/27957'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Invertebrates 2.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    2:00PM - 3:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 206 B    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Rachel Malison &amp; Ryan McManamay</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27958'
+               data-starttime='2026-05-18 21:00 +0000'
+               data-endtime='2026-05-18 22:30 0'
+               id='session_27958'
+               href='/schedule/session/27958'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Operationalizing remote sensing for water security and freshwater ecosystem integrity in dryland regions 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    2:00PM - 3:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 206 C    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Erik Nati-Johnson &amp; Colin Martin</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27959'
+               data-starttime='2026-05-18 21:00 +0000'
+               data-endtime='2026-05-18 22:30 0'
+               id='session_27959'
+               href='/schedule/session/27959'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: The Changing Cryosphere and Its Impacts on Downstream Freshwaters 2.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    2:00PM - 3:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Rooms 206 D    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Matthew Dunkle &amp; Holly Harris</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27960'
+               data-starttime='2026-05-18 21:00 +0000'
+               data-endtime='2026-05-18 22:30 0'
+               id='session_27960'
+               href='/schedule/session/27960'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Contaminant Ecology 2.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    2:00PM - 3:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 207    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Cailin Sinclair &amp; Jessica Brandt</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27961'
+               data-starttime='2026-05-18 21:00 +0000'
+               data-endtime='2026-05-18 22:30 0'
+               id='session_27961'
+               href='/schedule/session/27961'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Large Rivers 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    2:00PM - 3:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 203    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Nick Aumen &amp; Mark Lueders</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27962'
+               data-starttime='2026-05-18 22:30 +0000'
+               data-endtime='2026-05-18 23:00 0'
+               id='session_27962'
+               href='/schedule/session/27962'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Afternoon Coffee Break  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    3:30PM - 4:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Ballroom Lobby    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_28060'
+               data-starttime='2026-05-18 23:00 +0000'
+               data-endtime='2026-05-19 00:00 0'
+               id='session_28060'
+               href='/schedule/session/28060'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    SFS TCP Meeting (by invite only)  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    4:00PM - 5:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 402 ABC    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_27991'
+               data-starttime='2026-05-18 23:00 +0000'
+               data-endtime='2026-05-19 00:30 0'
+               id='session_27991'
+               href='/schedule/session/27991'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Freshwater-Marine Connections & Estuaries 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    4:00PM - 5:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Ballroom 100 ABC    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Mack White &amp; Ian Barnes</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27963'
+               data-starttime='2026-05-18 23:00 +0000'
+               data-endtime='2026-05-19 00:30 0'
+               id='session_27963'
+               href='/schedule/session/27963'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Invasive & Non-Native Species 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    4:00PM - 5:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Conference Theatre    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Corey Krabbenhoft &amp; Susan Washko</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27964'
+               data-starttime='2026-05-18 23:00 +0000'
+               data-endtime='2026-05-19 00:30 0'
+               id='session_27964'
+               href='/schedule/session/27964'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Across ecosystem linkages: quantifying aquatic-terrestrial reciprocal connections to support resilient watersheds 3.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    4:00PM - 5:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 102 AB    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+                  <span class='chairman'>Chair: Amaryllis Adey</span><br />
+      
+            </div>
+
+            </a>
+                                        
+            <a data-entity='session_27965'
+               data-starttime='2026-05-18 23:00 +0000'
+               data-endtime='2026-05-19 00:30 0'
+               id='session_27965'
+               href='/schedule/session/27965'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Organic Matter Processing 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    4:00PM - 5:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 201 ABC    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Mark O. Gessner &amp; Spencer Rhea</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27942'
+               data-starttime='2026-05-18 23:00 +0000'
+               data-endtime='2026-05-19 00:30 0'
+               id='session_27942'
+               href='/schedule/session/27942'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Algae & Aquatic Plants 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    4:00PM - 5:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 202 ABC    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Paula Furey &amp; Michael Zampini</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27968'
+               data-starttime='2026-05-18 23:00 +0000'
+               data-endtime='2026-05-19 00:30 0'
+               id='session_27968'
+               href='/schedule/session/27968'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Molecular Ecology 2.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    4:00PM - 5:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 205    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Chris Caudill &amp; Erasme Uyizeye</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28023'
+               data-starttime='2026-05-18 23:00 +0000'
+               data-endtime='2026-05-19 00:30 0'
+               id='session_28023'
+               href='/schedule/session/28023'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Swimming together: Successful freshwater collaborations across multiple organizations to generate actionable science 2.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    4:00PM - 5:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 206 A    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Audrey Huff &amp; Erin Larson</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27943'
+               data-starttime='2026-05-18 23:00 +0000'
+               data-endtime='2026-05-19 00:30 0'
+               id='session_27943'
+               href='/schedule/session/27943'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Freshwater Mussels 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    4:00PM - 5:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 206 B    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Leslie Rieck &amp; Heili Lowman</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27970'
+               data-starttime='2026-05-18 23:00 +0000'
+               data-endtime='2026-05-19 00:30 0'
+               id='session_27970'
+               href='/schedule/session/27970'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Intermittent and Ephemeral Systems 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    4:00PM - 5:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 206 C    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Amy Burgin &amp; Eryl Austin-Bingamon</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27971'
+               data-starttime='2026-05-18 23:00 +0000'
+               data-endtime='2026-05-19 00:30 0'
+               id='session_27971'
+               href='/schedule/session/27971'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: The Changing Cryosphere and Its Impacts on Downstream Freshwaters 3.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    4:00PM - 5:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Rooms 206 D    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Holly Harris &amp; Matthew Dunkle</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27972'
+               data-starttime='2026-05-18 23:00 +0000'
+               data-endtime='2026-05-19 00:30 0'
+               id='session_27972'
+               href='/schedule/session/27972'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Contaminant Ecology 3.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    4:00PM - 5:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 207    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Jessica Brandt &amp; Cailin Sinclair</span>
+      </div>
+
+  <div id='session-sponsor'>
+    <div id='session-sponsor-text' class='col-md-4 col-xs-6'>
+      <h6>Sponsored by:</h6>
+    </div>
+
+    
+          <div class='col-md-4 col-xs-6 sponsorlogo'>
+        <img src='https://asnevents.s3.amazonaws.com/Sponsorship-Logo/10196/Stroud+Resize.jpg'  class='sponsor-logo'  />      </div>
+      </div>
+            </a>
+                                        
+            <a data-entity='session_27973'
+               data-starttime='2026-05-18 23:00 +0000'
+               data-endtime='2026-05-19 00:30 0'
+               id='session_27973'
+               href='/schedule/session/27973'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: State of the science of the Spokane Valley Rathdrum Prairie Aquifer and its watershed 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    4:00PM - 5:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 203    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+                  <span class='chairman'>Chair: Meg Wolf</span><br />
+      
+            </div>
+
+            </a>
+                                        
+            <a data-entity='session_28061'
+               data-starttime='2026-05-19 01:00 +0000'
+               data-endtime='2026-05-19 03:30 0'
+               id='session_28061'
+               href='/schedule/session/28061'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Student/Mentor Mixer (ticketed event)  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    6:00PM - 8:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      DoubleTree by Hilton Hotel Spokane    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_28117'
+               data-starttime='2026-05-19 03:30 +0000'
+               data-endtime='2026-05-19 05:30 0'
+               id='session_28117'
+               href='/schedule/session/28117'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    SRC Live Auction & Bingo  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    8:30PM - 10:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      DoubleTree by Hilton Hotel Spokane    </div>
+  </div>
+
+
+            </a>
+                        </div>
+          <div class='list-group session-day' data-date='2026-05-19'>
+                              
+            <a data-entity='session_27974'
+               data-starttime='2026-05-19 14:00 +0000'
+               data-endtime='2026-05-19 15:30 0'
+               id='session_27974'
+               href='/schedule/session/27974'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    5km Fun Run - Ticketed Event  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    7:00AM - 8:30AM  </div>
+
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_27975'
+               data-starttime='2026-05-19 14:30 +0000'
+               data-endtime='2026-05-20 00:30 0'
+               id='session_27975'
+               href='/schedule/session/27975'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Registration Open  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    7:30AM - 5:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 103    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_27976'
+               data-starttime='2026-05-19 15:30 +0000'
+               data-endtime='2026-05-19 17:00 0'
+               id='session_27976'
+               href='/schedule/session/27976'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Plenary Session 2 - Caj Mathesson & Laura Laumatia  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    8:30AM - 10:00AM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Ballroom 100 ABC    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_28062'
+               data-starttime='2026-05-19 17:00 +0000'
+               data-endtime='2026-05-20 00:00 0'
+               id='session_28062'
+               href='/schedule/session/28062'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Poster Viewing Open  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:00AM - 5:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Ballroom 111 ABC    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_27977'
+               data-starttime='2026-05-19 17:00 +0000'
+               data-endtime='2026-05-19 17:30 0'
+               id='session_27977'
+               href='/schedule/session/27977'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Morning Coffee Break  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:00AM - 10:30AM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Ballroom Lobby    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_27978'
+               data-starttime='2026-05-19 17:30 +0000'
+               data-endtime='2026-05-19 19:00 0'
+               id='session_27978'
+               href='/schedule/session/27978'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Sym-Poff-ium: A celebration of and reflection on the impact of N. LeRoy Poff’s career in riverine ecology science and practice 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Conference Theatre    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: W. Chris Funk &amp; Julian Olden</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27979'
+               data-starttime='2026-05-19 17:30 +0000'
+               data-endtime='2026-05-19 19:00 0'
+               id='session_27979'
+               href='/schedule/session/27979'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Land-Water Connections 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 102 AB    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Jeff Wesner &amp; Madeline Hannappel</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27980'
+               data-starttime='2026-05-19 17:30 +0000'
+               data-endtime='2026-05-19 19:00 0'
+               id='session_27980'
+               href='/schedule/session/27980'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Biogeochemistry 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 201 ABC    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Joanna Blaszczak &amp; Jason Aguirre</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28008'
+               data-starttime='2026-05-19 17:30 +0000'
+               data-endtime='2026-05-20 19:00 0'
+               id='session_28008'
+               href='/schedule/session/28008'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Biogeochemical Perspectives on Resilience in Agriculturally Influenced Freshwater Systems 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 202 ABC    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Kathleen Cutting &amp; Karessa De La Paz</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27982'
+               data-starttime='2026-05-19 17:30 +0000'
+               data-endtime='2026-05-19 19:00 0'
+               id='session_27982'
+               href='/schedule/session/27982'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Zoogeochemistry in freshwaters: Integrating animal conservation with biogeochemistry 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 205    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Jonathan Lopez &amp; Taylor Michael</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27983'
+               data-starttime='2026-05-19 17:30 +0000'
+               data-endtime='2026-05-19 19:00 0'
+               id='session_27983'
+               href='/schedule/session/27983'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session & Workshop: Indigenous leadership and collaborative partnerships advancing freshwater science 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 206 A    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Colden Baxter &amp; Laurel Genzoli</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27984'
+               data-starttime='2026-05-19 17:30 +0000'
+               data-endtime='2026-05-19 19:00 0'
+               id='session_27984'
+               href='/schedule/session/27984'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Bioassessment 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 206 B    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Justin Pomeranz &amp; Dave Arscott</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27985'
+               data-starttime='2026-05-19 17:30 +0000'
+               data-endtime='2026-05-19 19:00 0'
+               id='session_27985'
+               href='/schedule/session/27985'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Non-perennial freshwater ecosystems: Resilience in a drying world 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 206 C    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Shannon Speir &amp; Erin Seybold</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27986'
+               data-starttime='2026-05-19 17:30 +0000'
+               data-endtime='2026-05-19 19:00 0'
+               id='session_27986'
+               href='/schedule/session/27986'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Communities & Populations 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Rooms 206 D    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Phillip Bumpers &amp; Vamery González Hernández</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27987'
+               data-starttime='2026-05-19 17:30 +0000'
+               data-endtime='2026-05-19 19:00 0'
+               id='session_27987'
+               href='/schedule/session/27987'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Contaminant Ecology 4.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 207    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Cailin Sinclair &amp; Jessica Brandt</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27988'
+               data-starttime='2026-05-19 17:30 +0000'
+               data-endtime='2026-05-19 19:00 0'
+               id='session_27988'
+               href='/schedule/session/27988'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Assessment and management of wastewater in urban and suburban streams 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 203    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Abel Porras &amp; Christina Bryant</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28219'
+               data-starttime='2026-05-19 19:00 +0000'
+               data-endtime='2026-05-19 20:30 0'
+               id='session_28219'
+               href='/schedule/session/28219'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Lunch on Your Own  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    12:00PM - 1:30PM  </div>
+
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_28662'
+               data-starttime='2026-05-19 19:00 +0000'
+               data-endtime='2026-05-19 20:30 0'
+               id='session_28662'
+               href='/schedule/session/28662'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Ask Me Anything with SFS Executive Director Andy Leidolf  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    12:00PM - 1:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 203    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_27990'
+               data-starttime='2026-05-19 20:30 +0000'
+               data-endtime='2026-05-19 22:00 0'
+               id='session_27990'
+               href='/schedule/session/27990'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Sym-Poff-ium: A celebration of and reflection on the impact of N. LeRoy Poff’s career in riverine ecology science and practice 2.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    1:30PM - 3:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Conference Theatre    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Deb Finn &amp; W. Chris Funk</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28112'
+               data-starttime='2026-05-19 20:30 +0000'
+               data-endtime='2026-05-19 22:00 0'
+               id='session_28112'
+               href='/schedule/session/28112'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Land-Water Connections 2.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    1:30PM - 3:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 102 AB    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Andrew A. Ali &amp; Stanley Liphadzi</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27992'
+               data-starttime='2026-05-19 20:30 +0000'
+               data-endtime='2026-05-19 22:00 0'
+               id='session_27992'
+               href='/schedule/session/27992'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Biogeochemistry 2.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    1:30PM - 3:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 201 ABC    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Lauren E Kinsman-Costello &amp; Claire Griffin</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28020'
+               data-starttime='2026-05-19 20:30 +0000'
+               data-endtime='2026-05-19 22:00 0'
+               id='session_28020'
+               href='/schedule/session/28020'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Biogeochemical Perspectives on Resilience in Agriculturally Influenced Freshwater Systems 2.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    1:30PM - 3:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 202 ABC    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Nellie Little &amp; Mahima Quazi</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27994'
+               data-starttime='2026-05-19 20:30 +0000'
+               data-endtime='2026-05-19 22:00 0'
+               id='session_27994'
+               href='/schedule/session/27994'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Zoogeochemistry in freshwaters: Integrating animal conservation with biogeochemistry 2.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    1:30PM - 3:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 205    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Taylor Michael &amp; Jonathan Lopez</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27995'
+               data-starttime='2026-05-19 20:30 +0000'
+               data-endtime='2026-05-19 22:00 0'
+               id='session_27995'
+               href='/schedule/session/27995'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session & Workshop: Indigenous leadership and collaborative partnerships advancing freshwater science 2.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    1:30PM - 3:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 206 A    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Laurel Genzoli &amp; Colden Baxter</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27996'
+               data-starttime='2026-05-19 20:30 +0000'
+               data-endtime='2026-05-19 22:00 0'
+               id='session_27996'
+               href='/schedule/session/27996'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Bioassessment 2.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    1:30PM - 3:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 206 B    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Anna Hamilton &amp; Katelyn Lawson</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27997'
+               data-starttime='2026-05-19 20:30 +0000'
+               data-endtime='2026-05-19 22:00 0'
+               id='session_27997'
+               href='/schedule/session/27997'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Non-perennial freshwater ecosystems: Resilience in a drying world 2.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    1:30PM - 3:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 206 C    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Rachel Stubbington &amp; Erin Seybold</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27998'
+               data-starttime='2026-05-19 20:30 +0000'
+               data-endtime='2026-05-19 22:00 0'
+               id='session_27998'
+               href='/schedule/session/27998'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Communities & Populations 2.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    1:30PM - 3:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Rooms 206 D    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Brian Helms &amp; James Junker</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27999'
+               data-starttime='2026-05-19 20:30 +0000'
+               data-endtime='2026-05-19 22:00 0'
+               id='session_27999'
+               href='/schedule/session/27999'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Plastics 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    1:30PM - 3:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 207    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Mary Engels &amp; Matt Trentman</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28000'
+               data-starttime='2026-05-19 20:30 +0000'
+               data-endtime='2026-05-19 22:00 0'
+               id='session_28000'
+               href='/schedule/session/28000'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Practical Tools for Urban Waterway Management 1.0   </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    1:30PM - 3:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 203    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Brian Murphy &amp; Mateo Scoggins</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27989'
+               data-starttime='2026-05-19 22:00 +0000'
+               data-endtime='2026-05-20 00:00 0'
+               id='session_27989'
+               href='/schedule/session/27989'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    SFS Membership Business Meeting & Endowment Awards Presentation (RSVP Required, all members welcome)  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    3:00PM - 5:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Ballroom 100 ABC    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_28119'
+               data-starttime='2026-05-20 00:00 +0000'
+               data-endtime='2026-05-20 01:30 0'
+               id='session_28119'
+               href='/schedule/session/28119'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Early-Career Networking Mixer & Professional Development Panel 1 - Job Search (ticketed event)  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    5:00PM - 6:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 201 ABC    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_28120'
+               data-starttime='2026-05-20 00:00 +0000'
+               data-endtime='2026-05-20 01:30 0'
+               id='session_28120'
+               href='/schedule/session/28120'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Early-Career Networking Mixer & Professional Development Panel 2 -  Discussion with Early Career Professionals (ticketed event)  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    5:00PM - 6:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 202 ABC    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_28360'
+               data-starttime='2026-05-20 00:00 +0000'
+               data-endtime='2026-05-20 01:00 0'
+               id='session_28360'
+               href='/schedule/session/28360'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Rocky Mountain Biological Laboratory (RMBL) Mixer  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    5:00PM - 6:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 102 AB    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_28444'
+               data-starttime='2026-05-20 00:00 +0000'
+               data-endtime='2026-05-20 01:30 0'
+               id='session_28444'
+               href='/schedule/session/28444'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Charcuterie with a Scientist  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    5:00PM - 6:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Spokane Central Library, Events Room A    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_28121'
+               data-starttime='2026-05-20 02:00 +0000'
+               data-endtime='2026-05-20 04:00 0'
+               id='session_28121'
+               href='/schedule/session/28121'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Freshwaters Illustrated, Rios to Rivers, and the Tribal Water Media Fellowship Program present: An evening of Tribal water storytelling.  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    7:00PM - 9:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Conference Theatre    </div>
+  </div>
+
+
+            </a>
+                        </div>
+          <div class='list-group session-day' data-date='2026-05-20'>
+                              
+            <a data-entity='session_28003'
+               data-starttime='2026-05-20 15:00 +0000'
+               data-endtime='2026-05-21 00:30 0'
+               id='session_28003'
+               href='/schedule/session/28003'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Registration Open  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    8:00AM - 5:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 103    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_28004'
+               data-starttime='2026-05-20 15:30 +0000'
+               data-endtime='2026-05-20 17:00 0'
+               id='session_28004'
+               href='/schedule/session/28004'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Plenary Session 3 - Angus McIntosh & Faith Kearns  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    8:30AM - 10:00AM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Ballroom 100 ABC    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_28122'
+               data-starttime='2026-05-20 17:00 +0000'
+               data-endtime='2026-05-21 00:30 0'
+               id='session_28122'
+               href='/schedule/session/28122'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Poster Viewing Open  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:00AM - 5:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Ballroom 111 ABC    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_28005'
+               data-starttime='2026-05-20 17:00 +0000'
+               data-endtime='2026-05-20 17:30 0'
+               id='session_28005'
+               href='/schedule/session/28005'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Morning Coffee Break  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:00AM - 10:30AM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Ballroom Lobby    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_28006'
+               data-starttime='2026-05-20 17:30 +0000'
+               data-endtime='2026-05-20 19:00 0'
+               id='session_28006'
+               href='/schedule/session/28006'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Restoring Freshwater Ecosystems to Build Resilient Watersheds and Communities: Insights from Europe and North America 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Conference Theatre    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Sebastian Birk &amp; Chris Frissell</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28007'
+               data-starttime='2026-05-20 17:30 +0000'
+               data-endtime='2026-05-20 19:00 0'
+               id='session_28007'
+               href='/schedule/session/28007'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Hydrology, Geomorphology, & Ecohydrology 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 102 AB    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Robert Payn &amp; Hayley Oakland</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27954'
+               data-starttime='2026-05-20 17:30 +0000'
+               data-endtime='2026-05-20 19:00 0'
+               id='session_27954'
+               href='/schedule/session/27954'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Ecosystem Metabolism 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 201 ABC    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Jonathan Behrens &amp; Steve Thomas</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27981'
+               data-starttime='2026-05-20 17:30 +0000'
+               data-endtime='2026-05-20 19:00 0'
+               id='session_27981'
+               href='/schedule/session/27981'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Advances in freshwater biogeochemistry using open data across networks of sites 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 202 ABC    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Wilfred Wollheim &amp; Ashif Hasan Abir</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28010'
+               data-starttime='2026-05-20 17:30 +0000'
+               data-endtime='2026-05-20 19:00 0'
+               id='session_28010'
+               href='/schedule/session/28010'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Beavers and Beyond: Patterns and Processes Driven by Ecosystem Engineers  1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 205    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Abigail Hullihen &amp; Emily Arsenault</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28041'
+               data-starttime='2026-05-20 17:30 +0000'
+               data-endtime='2026-05-20 19:00 0'
+               id='session_28041'
+               href='/schedule/session/28041'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: The other half of the river: elevating non-academic contributions to freshwater science 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 206 A    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Christina Linkem &amp; Benjamin Block</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28012'
+               data-starttime='2026-05-20 17:30 +0000'
+               data-endtime='2026-05-20 19:00 0'
+               id='session_28012'
+               href='/schedule/session/28012'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Biodiversity 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 206 B    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Christopher Swan &amp; Christian Schuerings</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28013'
+               data-starttime='2026-05-20 17:30 +0000'
+               data-endtime='2026-05-20 19:00 0'
+               id='session_28013'
+               href='/schedule/session/28013'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Non-perennial freshwater ecosystems: Resilience in a drying world 3.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 206 C    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Shannon Speir &amp; Rachel Stubbington</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28014'
+               data-starttime='2026-05-20 17:30 +0000'
+               data-endtime='2026-05-20 19:00 0'
+               id='session_28014'
+               href='/schedule/session/28014'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Food Webs 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Rooms 206 D    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Therese Frauendorf &amp; Lusha Tronstad</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28015'
+               data-starttime='2026-05-20 17:30 +0000'
+               data-endtime='2026-05-20 19:00 0'
+               id='session_28015'
+               href='/schedule/session/28015'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Landuse & Non-Point Source Impacts 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 207    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Jonathan Juarez &amp; Natalia Vargas López</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28016'
+               data-starttime='2026-05-20 17:30 +0000'
+               data-endtime='2026-05-20 19:00 0'
+               id='session_28016'
+               href='/schedule/session/28016'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Urban Systems 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 203    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+                  <span class='chairman'>Chair: Timothy Hoellein</span><br />
+      
+            </div>
+
+            </a>
+                                        
+            <a data-entity='session_28017'
+               data-starttime='2026-05-20 19:00 +0000'
+               data-endtime='2026-05-20 21:00 0'
+               id='session_28017'
+               href='/schedule/session/28017'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Lunch on Your Own  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    12:00PM - 2:00PM  </div>
+
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_28123'
+               data-starttime='2026-05-20 19:30 +0000'
+               data-endtime='2026-05-20 21:00 0'
+               id='session_28123'
+               href='/schedule/session/28123'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    SFS Fellows Meeting (by invitation only)  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    12:30PM - 2:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 205    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_28199'
+               data-starttime='2026-05-20 19:00 +0000'
+               data-endtime='2026-05-20 20:30 0'
+               id='session_28199'
+               href='/schedule/session/28199'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Nonperennial Ecosystem Chapter Mixer  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    12:00PM - 1:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 201 ABC    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_28125'
+               data-starttime='2026-05-20 20:00 +0000'
+               data-endtime='2026-05-20 21:00 0'
+               id='session_28125'
+               href='/schedule/session/28125'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Queer Social  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    1:00PM - 2:00PM  </div>
+
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_28124'
+               data-starttime='2026-05-20 19:30 +0000'
+               data-endtime='2026-05-20 21:00 0'
+               id='session_28124'
+               href='/schedule/session/28124'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Lunch & Learn Session - Dr Robyn Smyth, U.S. National Science Foundation  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    12:30PM - 2:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Ballroom 100 ABC    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_28018'
+               data-starttime='2026-05-20 21:00 +0000'
+               data-endtime='2026-05-20 22:30 0'
+               id='session_28018'
+               href='/schedule/session/28018'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Restoring Freshwater Ecosystems to Build Resilient Watersheds and Communities: Insights from Europe and North America 2.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    2:00PM - 3:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Conference Theatre    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Sebastian Birk &amp; Chris Frissell</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28019'
+               data-starttime='2026-05-20 21:00 +0000'
+               data-endtime='2026-05-20 22:30 0'
+               id='session_28019'
+               href='/schedule/session/28019'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Hyporheic Processes 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    2:00PM - 3:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 102 AB    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Chuanhui Gu &amp; Benjamin Hutchins</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27966'
+               data-starttime='2026-05-20 21:00 +0000'
+               data-endtime='2026-05-20 22:30 0'
+               id='session_27966'
+               href='/schedule/session/27966'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Ecosystem Metabolism 2.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    2:00PM - 3:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 201 ABC    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Eugenia Martí &amp; Katherine Pérez Rivera</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27993'
+               data-starttime='2026-05-20 21:00 +0000'
+               data-endtime='2026-05-20 22:30 0'
+               id='session_27993'
+               href='/schedule/session/27993'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Advances in freshwater biogeochemistry using open data across networks of sites 2.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    2:00PM - 3:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 202 ABC    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Erin Hotchkiss &amp; Ashif Hasan Abir</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28022'
+               data-starttime='2026-05-20 21:00 +0000'
+               data-endtime='2026-05-20 22:30 0'
+               id='session_28022'
+               href='/schedule/session/28022'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Beavers and Beyond: Patterns and Processes Driven by Ecosystem Engineers  2.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    2:00PM - 3:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 205    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Emily Arsenault &amp; Abigail Hullihen</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28052'
+               data-starttime='2026-05-20 21:00 +0000'
+               data-endtime='2026-05-20 22:30 0'
+               id='session_28052'
+               href='/schedule/session/28052'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: The other half of the river: elevating non-academic contributions to freshwater science 2.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    2:00PM - 3:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 206 A    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Benjamin Block &amp; Christina Linkem</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28024'
+               data-starttime='2026-05-20 21:00 +0000'
+               data-endtime='2026-05-20 22:00 0'
+               id='session_28024'
+               href='/schedule/session/28024'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Conservation 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    2:00PM - 3:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 206 B    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Karen Gaines &amp; Brice Crum</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28111'
+               data-starttime='2026-05-20 22:00 +0000'
+               data-endtime='2026-05-20 22:45 0'
+               id='session_28111'
+               href='/schedule/session/28111'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Mining and Stream: Best practices and impacts on stream food webs and water quality 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    3:00PM - 3:45PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 206 B    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+                  <span class='chairman'>Chair: Sherri Johnson</span><br />
+      
+            </div>
+
+            </a>
+                                        
+            <a data-entity='session_28025'
+               data-starttime='2026-05-20 21:00 +0000'
+               data-endtime='2026-05-20 22:30 0'
+               id='session_28025'
+               href='/schedule/session/28025'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Non-perennial freshwater ecosystems: Resilience in a drying world 4.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    2:00PM - 3:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 206 C    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Erin Seybold &amp; Rachel Stubbington</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28026'
+               data-starttime='2026-05-20 21:00 +0000'
+               data-endtime='2026-05-20 22:30 0'
+               id='session_28026'
+               href='/schedule/session/28026'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Food Webs 2.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    2:00PM - 3:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Rooms 206 D    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Amanda DelVecchia &amp; Sally Entrekin</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28027'
+               data-starttime='2026-05-20 21:00 +0000'
+               data-endtime='2026-05-20 22:30 0'
+               id='session_28027'
+               href='/schedule/session/28027'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Eutrophication & Harmful Algae 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    2:00PM - 3:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 207    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Ria Ghosh &amp; Hector Esparra-Escalera</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28028'
+               data-starttime='2026-05-20 21:00 +0000'
+               data-endtime='2026-05-20 22:30 0'
+               id='session_28028'
+               href='/schedule/session/28028'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: The ecology and diversity of our unprotected waters 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    2:00PM - 3:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 203    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+                  <span class='chairman'>Chair: Susan Colvin</span><br />
+      
+            </div>
+
+            </a>
+                                        
+            <a data-entity='session_28029'
+               data-starttime='2026-05-20 22:30 +0000'
+               data-endtime='2026-05-21 00:30 0'
+               id='session_28029'
+               href='/schedule/session/28029'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Poster Session & Taxonomic Fair (Coffee & Light Catering Provided)  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    3:30PM - 5:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Ballroom 111 ABC    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_28126'
+               data-starttime='2026-05-21 00:00 +0000'
+               data-endtime='2026-05-21 01:30 0'
+               id='session_28126'
+               href='/schedule/session/28126'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    BIPOC Talking Circle  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    5:00PM - 6:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Ballroom 100 ABC    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_28031'
+               data-starttime='2026-05-21 02:00 +0000'
+               data-endtime='2026-05-21 05:00 0'
+               id='session_28031'
+               href='/schedule/session/28031'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Off-site Evening Social (ticketed event)  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    7:00PM - 10:00PM  </div>
+
+  </div>
+
+
+            </a>
+                        </div>
+          <div class='list-group session-day' data-date='2026-05-21'>
+                              
+            <a data-entity='session_28127'
+               data-starttime='2026-05-21 14:00 +0000'
+               data-endtime='2026-05-21 15:30 0'
+               id='session_28127'
+               href='/schedule/session/28127'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    SFS Board of Directors Breakfast (by invitation only)  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    7:00AM - 8:30AM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 102 CD    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_28032'
+               data-starttime='2026-05-21 14:30 +0000'
+               data-endtime='2026-05-21 23:00 0'
+               id='session_28032'
+               href='/schedule/session/28032'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Registration Open  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    7:30AM - 4:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 103    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_28033'
+               data-starttime='2026-05-21 15:30 +0000'
+               data-endtime='2026-05-21 17:00 0'
+               id='session_28033'
+               href='/schedule/session/28033'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Plenary Session 4 - Will Clements  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    8:30AM - 10:00AM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Ballroom 100 ABC    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_28034'
+               data-starttime='2026-05-21 16:00 +0000'
+               data-endtime='2026-05-21 23:00 0'
+               id='session_28034'
+               href='/schedule/session/28034'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    SFS Instars/NSF Emerge Closing Workshop (by invite only)  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    9:00AM - 4:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Rooms 206 D    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_28035'
+               data-starttime='2026-05-21 17:00 +0000'
+               data-endtime='2026-05-21 17:30 0'
+               id='session_28035'
+               href='/schedule/session/28035'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Morning Coffee Break  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:00AM - 10:30AM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Ballroom Lobby    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_28036'
+               data-starttime='2026-05-21 17:30 +0000'
+               data-endtime='2026-05-21 19:00 0'
+               id='session_28036'
+               href='/schedule/session/28036'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Restoration 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Conference Theatre    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Allison Roy &amp; Robert Fournier</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27969'
+               data-starttime='2026-05-21 17:30 +0000'
+               data-endtime='2026-05-21 19:00 0'
+               id='session_27969'
+               href='/schedule/session/27969'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Unraveling wetland invertebrate dynamics: Connecting small-scale responses to landscape-level influences 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 102 AB    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Julia Portmann &amp; Elizabeth Sicking</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28038'
+               data-starttime='2026-05-21 17:30 +0000'
+               data-endtime='2026-05-21 19:00 0'
+               id='session_28038'
+               href='/schedule/session/28038'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Biogeochemistry 3.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 201 ABC    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+                  <span class='chairman'>Chair: William Mejia</span><br />
+      
+            </div>
+
+            </a>
+                                        
+            <a data-entity='session_28009'
+               data-starttime='2026-05-21 17:30 +0000'
+               data-endtime='2026-05-21 19:00 0'
+               id='session_28009'
+               href='/schedule/session/28009'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Lakes, ponds, reservoirs and wetlands oh my! Drivers, feedbacks, and responses of the carbon cycle under changing climate and anthropogenic stressors 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 202 ABC    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Phoenix Rogers &amp; Shuo Chen</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28040'
+               data-starttime='2026-05-21 17:30 +0000'
+               data-endtime='2026-05-21 19:00 0'
+               id='session_28040'
+               href='/schedule/session/28040'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Claws and effect: the role of crayfish across ecosystems 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 205    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: William Ota &amp; Checo Colon Gaud</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27955'
+               data-starttime='2026-05-21 17:30 +0000'
+               data-endtime='2026-05-21 19:00 0'
+               id='session_27955'
+               href='/schedule/session/27955'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Fish & other Vertebrates 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 206 A    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Stan Gregory &amp; Daniele Miranda</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28042'
+               data-starttime='2026-05-21 17:30 +0000'
+               data-endtime='2026-05-21 19:00 0'
+               id='session_28042'
+               href='/schedule/session/28042'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Management & Policy 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 206 B    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Krista Capps &amp; Rachel Smith</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28043'
+               data-starttime='2026-05-21 17:30 +0000'
+               data-endtime='2026-05-21 19:00 0'
+               id='session_28043'
+               href='/schedule/session/28043'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Advancing environmental flow management: Holistic approaches for sustaining aquatic ecosystems 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 206 C    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Kris Taniguchi-Quan &amp; Sooyeon Yi</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28045'
+               data-starttime='2026-05-21 17:30 +0000'
+               data-endtime='2026-05-21 19:00 0'
+               id='session_28045'
+               href='/schedule/session/28045'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Science Communication & Outreach 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 203    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Rich Walker &amp; Alison Zachritz</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28044'
+               data-starttime='2026-05-21 17:30 +0000'
+               data-endtime='2026-05-21 19:00 0'
+               id='session_28044'
+               href='/schedule/session/28044'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Positive biotic interactions in freshwater; importance, prevalence, and drivers. 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    10:30AM - 12:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 207    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Samuel Fritz &amp; Lindsey Albertson</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28046'
+               data-starttime='2026-05-21 19:00 +0000'
+               data-endtime='2026-05-21 21:00 0'
+               id='session_28046'
+               href='/schedule/session/28046'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Lunch on Your Own  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    12:00PM - 2:00PM  </div>
+
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_28366'
+               data-starttime='2026-05-21 20:00 +0000'
+               data-endtime='2026-05-21 21:00 0'
+               id='session_28366'
+               href='/schedule/session/28366'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Undergraduate Education and Research Chapter Get Together  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    1:00PM - 2:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 207    </div>
+  </div>
+
+
+            </a>
+                                        
+            <a data-entity='session_28047'
+               data-starttime='2026-05-21 21:00 +0000'
+               data-endtime='2026-05-21 22:30 0'
+               id='session_28047'
+               href='/schedule/session/28047'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Restoration 2.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    2:00PM - 3:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Conference Theatre    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+                  <span class='chairman'>Chair: Sara Kamanmalek</span><br />
+      
+            </div>
+
+            </a>
+                                        
+            <a data-entity='session_28048'
+               data-starttime='2026-05-21 21:00 +0000'
+               data-endtime='2026-05-21 22:30 0'
+               id='session_28048'
+               href='/schedule/session/28048'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Climate Change 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    2:00PM - 3:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 102 AB    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Audrey Thellman &amp; Wyatt Cross</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28049'
+               data-starttime='2026-05-21 21:00 +0000'
+               data-endtime='2026-05-21 22:30 0'
+               id='session_28049'
+               href='/schedule/session/28049'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Biogeochemistry 4.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    2:00PM - 3:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 201 ABC    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+                  <span class='chairman'>Chair: Robert Hall</span><br />
+      
+            </div>
+
+            </a>
+                                        
+            <a data-entity='session_28021'
+               data-starttime='2026-05-21 21:00 +0000'
+               data-endtime='2026-05-21 22:30 0'
+               id='session_28021'
+               href='/schedule/session/28021'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Lakes, ponds, reservoirs and wetlands oh my! Drivers, feedbacks, and responses of the carbon cycle under changing climate and anthropogenic stressors 2.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    2:00PM - 3:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 202 ABC    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Carla López Lloreda &amp; Natalie Griffiths</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28051'
+               data-starttime='2026-05-21 21:00 +0000'
+               data-endtime='2026-05-21 22:30 0'
+               id='session_28051'
+               href='/schedule/session/28051'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Claws and effect: the role of crayfish across ecosystems 2.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    2:00PM - 3:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 205    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Julian Olden &amp; Checo Colon Gaud</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_27967'
+               data-starttime='2026-05-21 21:00 +0000'
+               data-endtime='2026-05-21 22:30 0'
+               id='session_27967'
+               href='/schedule/session/27967'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Fish & other Vertebrates 2.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    2:00PM - 3:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 206 A    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Alexander Juan &amp; Amina Mohamed</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28053'
+               data-starttime='2026-05-21 21:00 +0000'
+               data-endtime='2026-05-21 22:45 0'
+               id='session_28053'
+               href='/schedule/session/28053'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: From Dead Ends to Discovery: Embracing Failure as a Pathway to Scientific Progress 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    2:00PM - 3:45PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 206 B    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Elise Snyder &amp; Amaryllis Adey</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28054'
+               data-starttime='2026-05-21 21:00 +0000'
+               data-endtime='2026-05-21 22:30 0'
+               id='session_28054'
+               href='/schedule/session/28054'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Advancing environmental flow management: Holistic approaches for sustaining aquatic ecosystems 2.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    2:00PM - 3:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 206 C    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Kris Taniguchi-Quan &amp; Sooyeon Yi</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28056'
+               data-starttime='2026-05-21 21:00 +0000'
+               data-endtime='2026-05-21 22:30 0'
+               id='session_28056'
+               href='/schedule/session/28056'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: Scholarship of teaching and learning in freshwater science 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    2:00PM - 3:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 207    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Elizabeth Sudduth &amp; Patina Mendez</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28055'
+               data-starttime='2026-05-21 21:00 +0000'
+               data-endtime='2026-05-21 22:30 0'
+               id='session_28055'
+               href='/schedule/session/28055'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Special Session: The fluvial pharmacy: Pharmaceuticals and their residuals in freshwater ecosystems 1.0  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    2:00PM - 3:30PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Room 203    </div>
+  </div>
+
+  <div class='title-line session-chairs'>
+    <i class='fa fa-gavel'></i>
+          <span class='chairman'>Chairs: Mitchell Liddick &amp; Ashley Hennessey</span>
+      </div>
+
+            </a>
+                                        
+            <a data-entity='session_28057'
+               data-starttime='2026-05-21 23:00 +0000'
+               data-endtime='2026-05-22 00:00 0'
+               id='session_28057'
+               href='/schedule/session/28057'
+               class='list-group-item session '>
+
+                <h4 class='title'>
+    Conference Closing Session  </h4>
+
+
+<div class='row track-information'>
+  </div>
+
+<div class='row'>
+  <div class='col-md-4 col-xs-12 title-line time hidden-sidebar'>
+    <i class='glyphicon glyphicon-time'></i>
+    4:00PM - 5:00PM  </div>
+
+      <div class='col-md-4 col-xs-12 title-line venue hidden-sidebar'>
+      <i class='glyphicon glyphicon-map-marker'></i>
+      Ballroom 100 ABC    </div>
+  </div>
+
+
+            </a>
+                        </div>
+    
+  </div>
+
+      <div id='login_modal' class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Login</h4>
+      </div>
+      <div class="modal-body">
+        <div id='login' class='ui-body-a '>
+  <form role='form' class='modalform' method="post" action='https://members.asnevents.com.au/login/do' data-ajax='false'>
+    <input type='hidden' name='csrf_token' value='MTc3ODk3Mzg1OThidmxJY1dEZzBkcnRtZ0E5Vk5DMzdVbU1Jc3l2ajB3' />    <input type='hidden' name='redirect_back' id='redirect_back' value='' />
+    <div>
+      <p>To access your <strong>personal details</strong>, <strong>event notifications</strong>, <strong>favourite abstracts</strong>, <strong>recorded notes</strong> and other features please provide your <strong>Currinda</strong> login details below.</p>
+    </div>
+
+    <div class="form-group">
+      <input type='text' name='Email' id='Email' class='textfield' value='' size='30' maxlength='160' placeholder='Email'/>    </div>
+    <div class="form-group">
+      <input type='password' name='Password' id='Password' class='textfield' value='' size='20' maxlength='' autocomplete='off' placeholder='Password' />    </div>
+    <div id='login-actions' class="form-group" data-role="fieldcontain">
+      <input id='loginbtn' type='submit' name='loginbtn' value='Login' class='submit btn btn-primary '  />      <a id='forgot-password' class='btn btn-default' data-role='button' data-theme='b' href="/login/forgotten">Forgot my password</a>
+    </div>
+  </form>
+</div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+  </div>
+    </div>
+    <nav id="tabbar" class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+  <ul class='nav nav-pills nav-justified nav-mobile-justified'>
+    <li>
+      <a id="information-tab" href="/information">
+        <i class='fa fa-info-circle'></i>
+        <span class='tabname hidden-xs'>Event Information</span>
+      </a>
+    </li>
+        <li>
+
+      <a id="schedule-tab" href="/schedule">
+        <i class='fa fa-calendar'></i>
+        <span class='tabname hidden-xs'>Schedule</span>
+      </a>
+    </li>
+        <li>
+      <a id="trade-tab" href="/login">
+        <i class='fa fa-star'></i>
+        <span class='tabname hidden-xs'>Favourites</span>
+      </a>
+    </li>
+    <li>
+      <a id="user-tab" href="/login">
+        <i class='glyphicon glyphicon-user'></i>
+        <span class='tabname hidden-xs'>Login</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+    
+    <div id="loading-bg">
+</div>
+<div id="loading">
+  <i class='fa fa-spinner fa-spin'></i></div>
+
+</body>
+</html>
