@@ -308,7 +308,9 @@ header.page-header .subtitle { font-size: 12px; opacity: 0.8; margin-top: 2px; }
   max-width: 90%; width: 420px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
   font-size: 14px; line-height: 1.5;
-  position: relative;  /* anchor for the absolute-positioned X */
+  /* No `position` override — native modal <dialog> centers itself in the
+     viewport by default. The X button's position:absolute anchors to the
+     dialog's own intrinsic positioning context. */
 }
 .about-dialog::backdrop { background: rgba(0,0,0,0.4); }
 .about-dialog p { margin: 0 0 14px; }
@@ -535,7 +537,6 @@ main { padding-bottom: 70px; }
   max-width: 90%; width: 360px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
   font-size: 14px; line-height: 1.4;
-  position: relative;  /* anchor for the absolute-positioned X */
 }
 .donate-dialog::backdrop { background: rgba(0,0,0,0.4); }
 .donate-dialog h3 { margin: 0 0 10px; font-size: 16px; }
