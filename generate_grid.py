@@ -662,16 +662,9 @@ def render_page(data: dict) -> str:
 
 <dialog id="about-dialog" class="about-dialog">
   <p>My dearest water nerds:</p>
-  <p>I am a grumpy, aging SFS member who can't navigate an SFS meeting without The Grid.
-     These newfangled "apps" and "favorite" buttons aren't compatible with my diminished intellect or my iPhone 6s.</p>
-  <p>This page is my offering to other grumpy old SFS members in hopes it will help
-     restore some lost sanity. I also hope that it helps younger SFS members realize that
-     all we really need when navigating life is a sense of where we want to be and
-     when we want to be there.</p>
-  <p>If you find this combobulation of space and time useful, I ask only that you make
-     a donation to support the younger and less grumpy SFS members, by clicking the
-     link at the bottom of the page.</p>
-  <p>Every donation will make me a little less grumpy.</p>
+  <p>I am a grumpy, aging SFS member who is lost without The Grid. These newfangled "apps" and "favorite" buttons aren't compatible with my diminished intellect or my iPhone 6s.</p>
+  <p>This page is my offering to fellow grumpy old SFS members. I also hope that it helps younger members realize that, when navigating life, we need only a sense of where we want to be and when we want to be there.</p>
+  <p>If you find this recombobulation of space and time useful, I ask that you use the link below to support the younger, less grumpy SFS members.  Every donation will make me a little less grumpy.</p>
   <p>This society is amazing. I love you all.</p>
   <p class="about-signature">—Grumpy</p>
   <form method="dialog" class="about-dialog-actions">
