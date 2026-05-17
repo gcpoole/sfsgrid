@@ -629,7 +629,7 @@ def render_page(data: dict) -> str:
 </main>
 
 <div class="donate-bar">
-  <a class="donate-link" href="#" id="donate-trigger">Found this useful? Donate to support SFS students →</a>
+  <a class="donate-link" href="#" id="donate-trigger">Like this? Donate to support SFS students →</a>
 </div>
 
 <dialog id="donate-dialog" class="donate-dialog">
