@@ -670,12 +670,11 @@ def render_page(data: dict) -> str:
   <form method="dialog" class="about-dialog-close-x">
     <button value="close" class="about-x" aria-label="Close">×</button>
   </form>
-  <p>My dearest water nerds:</p>
-  <p>I am a grumpy, aging SFS member. I am adrift without The Grid. These newfangled "apps" and "favorite" buttons are incompatible with my diminishing intellect and my iPhone 6s.</p>
-  <p>This page is my offering to fellow grumpy old SFS members. I also hope that it helps younger members realize that, when navigating life, we need only a sense of where we want to be and when we want to be there.</p>
-  <p>If you find this recombobulation of space and time useful, I ask that you use the link below to support younger, less grumpy SFS members.  Every donation will make me a little less grumpy.</p>
-  <p>This society is amazing. I love you all.</p>
-  <p class="about-signature">—Grumpy</p>
+  <p>My dearest fellow water nerds:</p>
+  <p>I am a grumpy, aging SFS member, forever adrift without The Grid. I made this enhanced version to view on my iPhone 6s as I totter around the meeting. It can be searched using the "find in page" feature in your browser.  Click any presentation for more info.</p>
+  <p>I offer this recombobulation of space and time to remind us that, whether navigating our meetings or our lives, we need only a sense of where we want to be and when we want to be there.</p>
+  <p>If you find it useful, I hope you will support our student members by clicking the link below.  I'm looking at you, fellow old-timers! This society is amazing. My gratitude to you all.</p>
+  <p class="about-signature">Love, Grumpy</p>
 </dialog>
 {tabs}
 <main>
