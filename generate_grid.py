@@ -698,6 +698,7 @@ def render_page(data: dict) -> str:
 </dialog>
 
 <script>{SCROLL_SYNC_JS}</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{{"token": "ddcf671f83ba4a13bd0d838e7d1b345a"}}'></script><!-- End Cloudflare Web Analytics -->
 <script>
   (function () {{
     // Donate dialog
