@@ -27,7 +27,6 @@ SCHEDULE_JSON = HERE / "sfs2026_schedule.json"
 OUT_HTML = HERE / "docs" / "index.html"
 
 PX_PER_MIN = 8
-LIGHTNING_THRESHOLD_MIN = 10
 
 # Per-day color palette (muted, professional).
 # 'cell' / 'cell_border' / 'cell_hover' are pale tints of 'bar' for talk cells.
@@ -42,9 +41,6 @@ DAY_COLORS = {
                   "cell": "#f1e0ea", "cell_border": "#d4b1c4", "cell_hover": "#e7cddb"},
 }
 
-MULTI_PRESENTER_MARKERS = [" & ", " and ", "Facilitators", "all presenters"]
-
-
 def parse_12h(t: str) -> datetime:
     return datetime.strptime(t.strip(), "%I:%M %p")
 
@@ -57,10 +53,6 @@ def clean_presenter(raw: str) -> str:
     """Strip noise from workshop presenter strings."""
     s = re.sub(r"^\(confirmed\)\s*", "", raw).strip()
     return s
-
-
-def is_multi_presenter(presenter: str) -> bool:
-    return any(m in presenter for m in MULTI_PRESENTER_MARKERS)
 
 
 def block_anchor(date: str, start: str) -> str:
@@ -104,49 +96,34 @@ def render_cell(presentation: dict, block_start_24h: str, day_color: dict, accor
     time_label = presentation["time"]
     abstract_url = presentation.get("abstract_url")
 
-    is_lightning = duration_min < LIGHTNING_THRESHOLD_MIN
-    multi = is_multi_presenter(presenter_raw)
-
-    # ---- Collapsed (summary) content ----
+    # ---- Summary content ----
+    # Every cell renders the same: time + full presenter + full title. CSS truncates
+    # what doesn't fit when collapsed; expanding the cell un-clips it.
     time_row = f"<div class='cell-time-row'>{escape(time_label)}</div>"
+    body_row = (
+        f"<div class='cell-body-row'>"
+        f"<span class='cell-presenter'>{escape(presenter_raw)}</span>"
+        f"<span class='cell-sep'>|</span>"
+        f"<span class='cell-title'>{escape(title)}</span>"
+        f"</div>"
+    )
+    summary_inner = f"<div class='cell-inner'>{time_row}{body_row}</div>"
 
-    if is_lightning:
-        body_row = f"<div class='cell-body-row'><span class='cell-title'>Lightning Talk</span></div>"
-        hidden_html = (
-            f"<span class='sr-only'> {escape(presenter_raw)} {escape(title)}</span>"
-        )
-    else:
-        presenter_display = "(multiple presenters)" if multi else presenter_raw
-        body_row = (
-            f"<div class='cell-body-row'>"
-            f"<span class='cell-presenter'>{escape(presenter_display)}</span>"
-            f"<span class='cell-sep'>|</span>"
-            f"<span class='cell-title'>{escape(title)}</span>"
-            f"</div>"
-        )
-        hidden_html = (
-            f"<span class='sr-only'> {escape(presenter_raw)}</span>" if multi else ""
-        )
-
-    summary_inner = f"<div class='cell-inner'>{time_row}{body_row}{hidden_html}</div>"
-
-    # ---- Expanded (overlay) content ----
+    # ---- Expanded content: just the abstract button. Presenter + title are
+    # already in the summary; expanding makes the cell tall enough that the
+    # summary's truncated text wraps and shows in full.
     link_html = (
         f"<a class='detail-link' href='{escape(abstract_url)}'>View abstract →</a>"
         if abstract_url else
         "<span class='detail-link detail-link-none'>(no online abstract)</span>"
     )
-    detail_html = (
-        f"<div class='cell-detail'>"
-        f"<div class='detail-time'>{escape(time_label)}</div>"
-        f"<div class='detail-presenter'>{escape(presenter_raw)}</div>"
-        f"<div class='detail-title'>{escape(title)}</div>"
-        f"{link_html}"
-        f"</div>"
-    )
+    detail_html = f"<div class='cell-detail'>{link_html}</div>"
 
+    # collapsed-height is set inline; CSS unsets it when [open] so the cell
+    # grows to fit its content.
     style = (
-        f"top:{top_px}px; height:{height_px}px;"
+        f"top:{top_px}px;"
+        f"--collapsed-height:{height_px}px;"
         f"background:{day_color['cell']};"
         f"border-color:{day_color['cell_border']};"
     )
@@ -237,7 +214,11 @@ def render_block(day: dict, block: dict) -> str:
     # block-cap (bar + header row) lives OUTSIDE the horizontal-scrolling
     # body-wrap, so vertical sticky pins it against the viewport (same trick
     # the tab bar uses). A tiny JS shim syncs header-row.scrollLeft to
-    # body-wrap.scrollLeft on horizontal scroll only.
+    # body-row.scrollLeft on horizontal scroll only.
+    #
+    # The body-row is the horizontal scroll container; the inner flex
+    # container is a separate element so cells can vertically overflow
+    # without being clipped (overflow-x:auto would otherwise clip overflow-y).
     return (
         f"<section class='block'>"
         f"<div class='block-cap'>"
@@ -247,7 +228,9 @@ def render_block(day: dict, block: dict) -> str:
         f"</div>"
         f"</div>"
         f"<div class='body-wrap'>"
+        f"<div class='body-scroll'>"
         f"<div class='body-row'>{body_cells}</div>"
+        f"</div>"
         f"</div>"
         f"</section>"
     )
@@ -298,7 +281,10 @@ header.page-header .subtitle { font-size: 12px; opacity: 0.8; margin-top: 2px; }
 }
 .tab:hover { opacity: 0.85; }
 
-section.block { margin: 24px 0; }
+section.block { margin: 24px 0; position: relative; }
+/* When a cell is open inside this block, raise the entire section's
+   stacking context so the open cell can draw over the next block below. */
+section.block:has(.cell[open]) { z-index: 100; }
 
 /* The block cap (bar + header row) lives OUTSIDE any horizontal scroll
    container — same as the tab bar — so vertical sticky pins it cleanly to
@@ -329,10 +315,20 @@ section.block { margin: 24px 0; }
   margin: 0 12px;
   border: 1px solid #ddd;
   border-top: none;
-  overflow-x: auto;
   background: #fff;
+  /* overflow stays visible so an open cell can escape vertically into the
+     space below the block. */
 }
-.header-row, .body-row {
+.header-row {
+  display: flex;
+}
+/* body-scroll holds the horizontal scroll; overflow-y stays visible so an
+   open cell can poke down out of the block. */
+.body-scroll {
+  overflow-x: auto;
+  overflow-y: visible;
+}
+.body-row {
   display: flex;
 }
 .col {
@@ -365,41 +361,38 @@ section.block { margin: 24px 0; }
 .col-body { position: relative; }
 .cell {
   position: absolute; left: 2px; right: 2px;
+  height: var(--collapsed-height);  /* time-proportional when collapsed */
   border: 1px solid;  /* color set inline per day */
   border-radius: 3px;
+  overflow: hidden;
   text-decoration: none; color: inherit;
   display: block;
   transition: filter 0.1s ease;
 }
 .cell[open] {
-  z-index: 20;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
-  /* Height stays fixed; detail panel overlays via position: absolute below. */
+  height: auto;  /* let content determine height when expanded */
+  min-height: var(--collapsed-height);  /* never shrink below original slot */
+  z-index: 30;  /* on top of sticky cap and tabs while open; JS closes on scroll */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.28);
+  border-color: #555 !important;
+  border-width: 2px;
+  overflow: visible;
 }
 .cell-summary {
-  list-style: none;  /* hide default disclosure triangle */
+  list-style: none;
   cursor: pointer;
   overflow: hidden;
-  height: 100%;
-  display: block;
 }
+.cell:not([open]) .cell-summary { height: 100%; }
 .cell-summary::-webkit-details-marker { display: none; }
 .cell:hover { filter: brightness(0.95); }
 .cell-detail {
-  position: absolute;
-  top: 100%; left: -1px; right: -1px;
-  margin-top: 2px;
-  padding: 8px 10px 10px;
-  background: #ffffff;
-  border: 1px solid #555;
-  border-radius: 3px;
+  padding: 6px 8px 10px;
+  border-top: 1px solid rgba(0,0,0,0.15);
+  margin-top: 4px;
   font-size: 12px;
   line-height: 1.4;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.28);
-  z-index: 30;
-  min-width: 220px;
 }
-.detail-time { color: #666; font-size: 11px; margin-bottom: 2px; }
 .detail-presenter { font-weight: 700; margin-bottom: 3px; }
 .detail-title { color: #222; margin-bottom: 8px; word-break: break-word; }
 .detail-link {
@@ -425,78 +418,55 @@ section.block { margin: 24px 0; }
 .cell-body-row {
   overflow: hidden;
 }
+/* When the cell is expanded, let its content fully show — no clipping. */
+.cell[open] .cell-inner,
+.cell[open] .cell-body-row {
+  overflow: visible;
+  height: auto;
+}
 .cell-sep { color: #aaa; margin: 0 4px; }
 .cell-presenter { font-weight: 700; }
 .cell-title { color: #333; }
 """
 
 
-STICKY_JS = """
-// Pin each block's column headers to the viewport top while that block is
-// being scrolled through. CSS sticky can't do this here because the columns
-// scroll horizontally inside the block, which breaks vertical sticky.
-(function () {
-  function offsetTop() {
-    var tab = document.querySelector('.tab-bar');
-    var bar = document.querySelector('.block-bar');
-    return (tab ? tab.offsetHeight : 0) + (bar ? bar.offsetHeight : 0);
-  }
-
-  function update() {
-    var pin = offsetTop();
-    document.querySelectorAll('section.block').forEach(function (block) {
-      var grid = block.querySelector('.block-grid');
-      if (!grid) return;
-      var rect = grid.getBoundingClientRect();
-      var headers = block.querySelectorAll('.col-header');
-      if (!headers.length) return;
-      var headerH = headers[0].offsetHeight;
-
-      var shift = 0;
-      if (rect.top < pin && rect.bottom > pin + headerH) {
-        shift = pin - rect.top;
-      } else if (rect.bottom <= pin + headerH) {
-        shift = rect.height - headerH;
-      }
-      headers.forEach(function (h) {
-        h.style.transform = 'translateY(' + shift + 'px)';
-        h.style.zIndex = shift > 0 ? '4' : '';
-      });
-    });
-  }
-
-  var ticking = false;
-  function onScroll() {
-    if (!ticking) {
-      requestAnimationFrame(function () { update(); ticking = false; });
-      ticking = true;
-    }
-  }
-
-  window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', onScroll);
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', update);
-  } else {
-    update();
-  }
-})();
-"""
-
-
 SCROLL_SYNC_JS = """
-// Sync each block's header row horizontal scroll to its body row's scroll.
-// Vertical sticky on the block-cap is pure CSS (no JS) — this handler only
-// fires during horizontal drag, which doesn't trigger mobile scroll-jumpiness.
+// (1) Sync each block's header row horizontal scroll to its body row's scroll.
+// Vertical sticky on the block-cap is pure CSS — this handler only fires
+// during horizontal drag.
+// (2) Close any open cell when the page scrolls vertically more than a small
+// jitter threshold. Opening a cell floats it above the sticky cap; scrolling
+// is a clear "I'm done looking at this" signal.
 (function () {
   document.querySelectorAll('section.block').forEach(function (block) {
-    var body = block.querySelector('.body-wrap');
+    var body = block.querySelector('.body-scroll');
     var header = block.querySelector('.header-wrap');
     if (!body || !header) return;
     body.addEventListener('scroll', function () {
       header.scrollLeft = body.scrollLeft;
     }, { passive: true });
   });
+
+  // Close-on-scroll: track the Y position when a cell opens; if the user
+  // moves more than 20px from that point, close it.
+  var openCell = null;
+  var openAtY = 0;
+
+  document.addEventListener('toggle', function (e) {
+    if (e.target.matches('details.cell') && e.target.open) {
+      openCell = e.target;
+      openAtY = window.scrollY;
+    } else if (e.target === openCell && !e.target.open) {
+      openCell = null;
+    }
+  }, true);
+
+  window.addEventListener('scroll', function () {
+    if (openCell && Math.abs(window.scrollY - openAtY) > 20) {
+      openCell.open = false;
+      openCell = null;
+    }
+  }, { passive: true });
 })();
 """
 
@@ -527,7 +497,6 @@ def render_page(data: dict) -> str:
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SFS 2026 — Concurrent Session Grid</title>
 <style>{CSS}</style>
-<script>{STICKY_JS}</script>
 </head>
 <body>
 <header class="page-header">
