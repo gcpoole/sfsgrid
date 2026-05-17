@@ -638,7 +638,7 @@ def render_page(data: dict) -> str:
      <strong>SFS Student and Early Career Enrichment Fund</strong> from the dropdown.</p>
   <form method="dialog" class="donate-dialog-actions">
     <button value="cancel" class="donate-cancel">Cancel</button>
-    <a class="donate-continue" href="https://www.freshwater-science.org/get-involved/donate/immediate-use/">Continue →</a>
+    <a class="donate-continue" href="https://www.zeffy.com/en-US/donation-form/society-for-freshwater-science--2026">Continue →</a>
   </form>
 </dialog>
 
