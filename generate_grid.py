@@ -468,6 +468,52 @@ section.block:has(.cell[open]) { z-index: 100; }
 .cell-sep { color: #aaa; margin: 0 4px; }
 .cell-presenter { font-weight: 700; }
 .cell-title { color: #333; }
+
+/* Sticky donation bar pinned to the bottom of the viewport. */
+.donate-bar {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: #f4b400; color: #2a2a2a;
+  padding: 14px 16px;
+  text-align: center;
+  font-size: 15px; font-weight: 700;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+  z-index: 300;
+  border-top: 2px solid #c68f00;
+}
+.donate-link {
+  color: #2a2a2a; text-decoration: none;
+  display: inline-block; padding: 2px 0;
+}
+.donate-link:hover { text-decoration: underline; }
+/* Leave room at the bottom of the page so the donate bar doesn't cover content. */
+main { padding-bottom: 70px; }
+
+/* Donation confirmation dialog */
+.donate-dialog {
+  border: none; border-radius: 8px;
+  padding: 20px 24px;
+  max-width: 90%; width: 360px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  font-size: 14px; line-height: 1.4;
+}
+.donate-dialog::backdrop { background: rgba(0,0,0,0.4); }
+.donate-dialog h3 { margin: 0 0 10px; font-size: 16px; }
+.donate-dialog p { margin: 0 0 18px; }
+.donate-dialog-actions {
+  display: flex; gap: 8px; justify-content: flex-end;
+}
+.donate-cancel, .donate-continue {
+  padding: 8px 14px; border-radius: 4px;
+  font-size: 13px; font-weight: 600;
+  border: 1px solid #ccc;
+  background: #f5f5f5; color: #333;
+  text-decoration: none; cursor: pointer;
+}
+.donate-continue {
+  background: #f4b400; color: #2a2a2a; border-color: #c68f00;
+}
+.donate-cancel:hover { background: #eee; }
+.donate-continue:hover { filter: brightness(1.1); }
 """
 
 
@@ -581,7 +627,37 @@ def render_page(data: dict) -> str:
 <main>
 {blocks_html}
 </main>
+
+<div class="donate-bar">
+  <a class="donate-link" href="#" id="donate-trigger">Found this useful? Donate to support SFS students →</a>
+</div>
+
+<dialog id="donate-dialog" class="donate-dialog">
+  <h3>Almost there!</h3>
+  <p>On the next page, please select the
+     <strong>SFS Student and Early Career Enrichment Fund</strong> from the dropdown.</p>
+  <form method="dialog" class="donate-dialog-actions">
+    <button value="cancel" class="donate-cancel">Cancel</button>
+    <a class="donate-continue" href="https://www.freshwater-science.org/get-involved/donate/immediate-use/">Continue →</a>
+  </form>
+</dialog>
+
 <script>{SCROLL_SYNC_JS}</script>
+<script>
+  (function () {{
+    var trigger = document.getElementById('donate-trigger');
+    var dialog = document.getElementById('donate-dialog');
+    if (!trigger || !dialog) return;
+    trigger.addEventListener('click', function (e) {{
+      e.preventDefault();
+      dialog.showModal();
+    }});
+    // Click outside the dialog content closes it.
+    dialog.addEventListener('click', function (e) {{
+      if (e.target === dialog) dialog.close();
+    }});
+  }})();
+</script>
 </body>
 </html>"""
 
