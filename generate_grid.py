@@ -252,18 +252,28 @@ def render_block(day: dict, block: dict) -> str:
     )
 
 
+SHORT_DAY = {
+    "Monday": "Mon", "Tuesday": "Tues", "Wednesday": "Weds", "Thursday": "Thurs",
+    "Friday": "Fri", "Saturday": "Sat", "Sunday": "Sun",
+}
+
+
 def render_tabs(data: dict) -> str:
-    """One link per day, side-by-side, mobile-friendly."""
+    """One link per day, plus an About button on the right."""
     tabs = []
     for day in data["days"]:
         color = DAY_COLORS.get(day["day_name"], DAY_COLORS["Monday"])
         anchor = day_anchor(day["date"])
+        short = SHORT_DAY.get(day["day_name"], day["day_name"])
         tabs.append(
             f"<a class='tab' href='#{anchor}' "
             f"style='background:{color['bar']}; color:{color['fg']};'>"
-            f"{escape(day['day_name'])}</a>"
+            f"{escape(short)}</a>"
         )
-    return f"<nav class='tab-bar'>{''.join(tabs)}</nav>"
+    about_btn = (
+        "<button class='tab tab-about' id='about-trigger'>About…</button>"
+    )
+    return f"<nav class='tab-bar'>{''.join(tabs)}{about_btn}</nav>"
 
 
 CSS = """
@@ -280,9 +290,35 @@ body {
 }
 header.page-header {
   background: #222; color: #fff; padding: 12px 16px;
+  display: flex; align-items: center; gap: 12px;
 }
-header.page-header h1 { margin: 0; font-size: 18px; font-weight: 600; }
+header.page-header h1 { margin: 0; font-size: 18px; font-weight: 600; flex: 1 1 auto; }
 header.page-header .subtitle { font-size: 12px; opacity: 0.8; margin-top: 2px; }
+.tab-about {
+  background: #444; color: #fff;
+  cursor: pointer; border: none;
+  flex: 0 0 auto;  /* don't expand to fill like day tabs */
+  margin-left: auto;  /* push to the right */
+}
+.tab-about:hover { filter: brightness(1.2); }
+
+.about-dialog {
+  border: none; border-radius: 8px;
+  padding: 24px 28px;
+  max-width: 90%; width: 420px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  font-size: 14px; line-height: 1.5;
+}
+.about-dialog::backdrop { background: rgba(0,0,0,0.4); }
+.about-dialog p { margin: 0 0 14px; }
+.about-signature { font-style: italic; color: #555; }
+.about-dialog-actions { display: flex; justify-content: flex-end; }
+.about-close {
+  padding: 8px 16px; border-radius: 4px;
+  border: 1px solid #ccc; background: #f5f5f5; color: #333;
+  font-size: 13px; font-weight: 600; cursor: pointer;
+}
+.about-close:hover { background: #eee; }
 .tab-bar {
   position: sticky; top: 0; z-index: 200;
   background: #ffffff; border-bottom: 1px solid #ddd;
@@ -623,6 +659,23 @@ def render_page(data: dict) -> str:
 <header class="page-header">
   <h1>SFS 2026 — Concurrent Session Grid</h1>
 </header>
+
+<dialog id="about-dialog" class="about-dialog">
+  <p>My dearest water nerds:</p>
+  <p>I am a grumpy, aging SFS member who can't navigate an SFS meeting without "the grid."
+     This page is my offering to other grumpy old SFS members in hopes it will help
+     restore your sanity. I also hope that it helps younger SFS members realize that
+     all we really need when navigating life is a sense of where we want to be and
+     when we want to be there.</p>
+  <p>If you find this crosstabulation of space and time useful, I ask that you consider
+     making a donation to support the younger and less grumpy SFS members.
+     Every donation will make me a little less grumpy.</p>
+  <p>This society is amazing. I love you all.</p>
+  <p class="about-signature">—Grumpy</p>
+  <form method="dialog" class="about-dialog-actions">
+    <button value="close" class="about-close">Close</button>
+  </form>
+</dialog>
 {tabs}
 <main>
 {blocks_html}
@@ -645,17 +698,31 @@ def render_page(data: dict) -> str:
 <script>{SCROLL_SYNC_JS}</script>
 <script>
   (function () {{
-    var trigger = document.getElementById('donate-trigger');
-    var dialog = document.getElementById('donate-dialog');
-    if (!trigger || !dialog) return;
-    trigger.addEventListener('click', function (e) {{
-      e.preventDefault();
-      dialog.showModal();
-    }});
-    // Click outside the dialog content closes it.
-    dialog.addEventListener('click', function (e) {{
-      if (e.target === dialog) dialog.close();
-    }});
+    // Donate dialog
+    var donateTrigger = document.getElementById('donate-trigger');
+    var donateDialog = document.getElementById('donate-dialog');
+    if (donateTrigger && donateDialog) {{
+      donateTrigger.addEventListener('click', function (e) {{
+        e.preventDefault();
+        donateDialog.showModal();
+      }});
+      donateDialog.addEventListener('click', function (e) {{
+        if (e.target === donateDialog) donateDialog.close();
+      }});
+    }}
+
+    // About dialog
+    var aboutTrigger = document.getElementById('about-trigger');
+    var aboutDialog = document.getElementById('about-dialog');
+    if (aboutTrigger && aboutDialog) {{
+      aboutTrigger.addEventListener('click', function (e) {{
+        e.preventDefault();
+        aboutDialog.showModal();
+      }});
+      aboutDialog.addEventListener('click', function (e) {{
+        if (e.target === aboutDialog) aboutDialog.close();
+      }});
+    }}
   }})();
 </script>
 </body>
